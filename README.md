@@ -792,9 +792,9 @@ pages/
 
 The GitHub Pages website is:
 
-```text
+
 https://asamkelisiwe-madikane.github.io/
-```
+
 
 GitHub Pages uses `index.html` as the default homepage when the site root is opened.
 
@@ -830,13 +830,13 @@ The project repository contains the website source files and supporting document
 
 The repository contains:
 
-```text
+
 index.html
 pages/
 assets/
 css/
 README.md
-```
+
 
 The repository is intended to remain public so that the website can be accessed and assessed.
 
