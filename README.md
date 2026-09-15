@@ -334,7 +334,7 @@ File:
 
 
 pages/about.html
-```
+
 
 The About Us page provides information about the organisation.
 
