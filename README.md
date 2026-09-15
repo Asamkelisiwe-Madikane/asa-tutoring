@@ -234,7 +234,7 @@ Images and other media are stored inside:
 
 
 assets/
-```
+
 
 The stylesheet is stored inside:
 
