@@ -240,7 +240,7 @@ The stylesheet is stored inside:
 
 
 css/
-```
+
 
 ---
 
