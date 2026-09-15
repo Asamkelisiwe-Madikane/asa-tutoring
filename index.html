@@ -1,0 +1,257 @@
+<!-- HTML5 document declaration tells the browser which HTML standard is being used. -->
+<!DOCTYPE html>
+<!-- The html element contains the complete webpage and declares English as the page language. -->
+<html lang="en">
+<!-- The head contains page settings, metadata and the link to the shared CSS file. -->
+<head>
+    <!-- The character set allows the page to display common symbols correctly. -->
+    <meta charset="UTF-8">
+    <!-- The viewport setting makes the page scale correctly on mobile devices. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- This description helps describe the website to search engines and assistive tools. -->
+    <meta name="description" content="Asa's Future Tutoring Centre provides Mathematics, Physical Sciences, Life Sciences and Online Tutoring.">
+    <!-- The page title appears in the browser tab. -->
+    <title>Home | Asa's Future Tutoring Centre</title>
+    <!-- The external stylesheet provides all visual styling for this page. -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- End of the page metadata and stylesheet section. -->
+</head>
+<!-- The body contains all visible content displayed to website visitors. -->
+<body>
+    <!-- The header contains the organisation branding and the main site navigation. -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <!-- The branding groups the logo, organisation name and tagline together. -->
+            <div class="branding">
+                <!-- The logo is positioned in the top corner of the header and links back to Home. -->
+                <a class="corner-logo-link" href="index.html" aria-label="Asa's Future Tutoring Centre Home">
+                    <img class="site-logo" src="assets/asa-future-tutoring-logo.png" alt="Asa's Future Tutoring Centre logo">
+                </a>
+                <!-- The main heading identifies the website organisation. -->
+                <h1>Asa's Future Tutoring Centre</h1>
+                <!-- The tagline communicates the purpose of the centre. -->
+                <p>Supporting Learners to Achieve Academic Success</p>
+            </div>
+        </div>
+        <!-- The navigation element provides links to every main website page. -->
+        <nav class="site-nav" aria-label="Main navigation">
+            <!-- The hidden checkbox controls the mobile hamburger menu without requiring JavaScript. -->
+            <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Open or close navigation menu">
+            <!-- The label becomes the three-line hamburger button on smaller screens. -->
+            <label for="menu-toggle" class="hamburger" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <!-- The navigation list remains visible on larger screens and opens from the hamburger on mobile. -->
+            <div class="container nav-container">
+                <ul>
+                    <!-- The current page is marked with aria-current for accessibility. -->
+                    <li><a href="index.html" aria-current="page">Home</a></li>
+                    <li><a href="pages/about.html">About Us</a></li>
+                    <li><a href="pages/services.html">Services &amp; Tutors</a></li>
+                    <li><a href="pages/enquiry.html">Enquiry</a></li>
+                    <li><a href="pages/contact.html">Contact</a></li>
+                </ul>
+            </div>
+        <!-- On small screens, the hamburger control above shows or hides this navigation list. -->
+        </nav>
+    </header>
+
+    <!-- Main contains the unique content of the home page. -->
+    <main>
+        <!-- The hero section introduces the centre and provides immediate calls to action. -->
+        <section class="hero">
+            <div class="container">
+                <!-- The slogan gives visitors a short summary of the centre's approach. -->
+                <p class="slogan">LEARN • GROW • SUCCEED</p>
+                <!-- The main hero heading communicates the website's primary purpose. -->
+                <h2>Helping Learners Achieve Their Full Potential</h2>
+                <!-- This paragraph explains who the centre supports and what it provides. -->
+                <p>Welcome to Asa's Future Tutoring Centre, where we provide personalised academic support to learners from Grade 8 to Grade 12.</p>
+                <!-- These links allow visitors to act immediately. -->
+                <a class="button" href="pages/enquiry.html">Make an Enquiry</a>
+                <a class="button" href="pages/services.html">View Services &amp; Tutors</a>
+            </div>
+        </section>
+
+        <!-- This section highlights the main benefits of the tutoring centre. -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-heading">Why Choose Asa's Future?</h2>
+                <div class="card-grid">
+                    <!-- Each article represents one benefit and uses a semantic HTML element. -->
+                    <article class="card">
+                        <h3>Personalised Support</h3>
+                        <p>Lessons are adapted to the learner's needs, strengths and areas for improvement.</p>
+                    </article>
+                    <!-- This article represents a self-contained item of information within the current section. -->
+                    <article class="card">
+                        <h3>Qualified Tutors</h3>
+                        <p>Meet subject-focused tutors who are committed to helping learners understand their work.</p>
+                    </article>
+                    <!-- This article represents a self-contained item of information within the current section. -->
+                    <article class="card">
+                        <h3>Online Options</h3>
+                        <p>Online tutoring gives learners flexible access to academic support from different locations.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- This section lets learners see the tutors without having to visit another page first. -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-heading">Meet Our Tutors</h2>
+                <p>See who you might meet when you choose one of our tutoring services.</p>
+                <div class="tutor-grid">
+                    <!-- Mathematics tutor profile. -->
+                    <article class="tutor-card">
+                        <!-- The figure groups an image with its related caption or visual description. -->
+                        <figure>
+                            <!-- Click the image to open a larger version for easier viewing. -->
+<a class="image-link" href="assets/thandi-mokoena.jpg" target="_blank" rel="noopener" aria-label="View larger image: Portrait of Mathematics tutor Ms. Thandi Mokoena">
+    <img src="assets/thandi-mokoena.jpg" alt="Portrait of Mathematics tutor Ms. Thandi Mokoena">
+</a>
+                            <figcaption>Ms. Thandi Mokoena</figcaption>
+                        </figure>
+                        <p class="tutor-subject">Mathematics Tutor</p>
+                        <p>BSc (Mathematics) | PGCE</p>
+                        <p>Supports Grades 8–12 with clear, step-by-step explanations and problem-solving practice.</p>
+                    </article>
+                    <!-- Physical Sciences tutor profile. -->
+                    <article class="tutor-card">
+                        <!-- The figure groups an image with its related caption or visual description. -->
+                        <figure>
+                            <!-- Click the image to open a larger version for easier viewing. -->
+<a class="image-link" href="assets/sipho-dlamini.jpg" target="_blank" rel="noopener" aria-label="View larger image: Portrait of Physical Sciences tutor Mr. Sipho Dlamini">
+    <img src="assets/sipho-dlamini.jpg" alt="Portrait of Physical Sciences tutor Mr. Sipho Dlamini">
+</a>
+                            <figcaption>Mr. Sipho Dlamini</figcaption>
+                        </figure>
+                        <p class="tutor-subject">Physical Sciences Tutor</p>
+                        <p>BSc (Physics &amp; Chemistry) | PGCE</p>
+                        <p>Uses practical examples and real-world applications to explain Physics and Chemistry.</p>
+                    </article>
+                    <!-- Life Sciences tutor profile. -->
+                    <article class="tutor-card">
+                        <!-- The figure groups an image with its related caption or visual description. -->
+                        <figure>
+                            <!-- Click the image to open a larger version for easier viewing. -->
+<a class="image-link" href="assets/leanne-du-toit.jpg" target="_blank" rel="noopener" aria-label="View larger image: Portrait of Life Sciences tutor Ms. Leanne du Toit">
+    <img src="assets/leanne-du-toit.jpg" alt="Portrait of Life Sciences tutor Ms. Leanne du Toit">
+</a>
+                            <figcaption>Ms. Leanne du Toit</figcaption>
+                        </figure>
+                        <p class="tutor-subject">Life Sciences Tutor</p>
+                        <p>BSc (Biology) | PGCE</p>
+                        <p>Provides clear explanations and personalised support for Life Sciences concepts.</p>
+                    </article>
+                    <!-- Online tutoring specialist profile. -->
+                    <article class="tutor-card">
+                        <!-- The figure groups an image with its related caption or visual description. -->
+                        <figure>
+                            <!-- Click the image to open a larger version for easier viewing. -->
+<a class="image-link" href="assets/naledi-phiri.jpg" target="_blank" rel="noopener" aria-label="View larger image: Portrait of Online Tutoring specialist Ms. Naledi Phiri">
+    <img src="assets/naledi-phiri.jpg" alt="Portrait of Online Tutoring specialist Ms. Naledi Phiri">
+</a>
+                            <figcaption>Ms. Naledi Phiri</figcaption>
+                        </figure>
+                        <p class="tutor-subject">Online Tutoring Specialist</p>
+                        <p>BEd (Education) | PGCE</p>
+                        <p>Provides flexible online lessons using digital tools and interactive learning methods.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- This section gives a short summary of the available services. -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-heading">Our Tutoring Services</h2>
+                <div class="card-grid">
+                    <!-- This article represents a self-contained item of information within the current section. -->
+                    <article class="card">
+                        <h3>Mathematics</h3>
+                        <p>Build confidence in mathematical concepts, calculations and problem solving.</p>
+                    </article>
+                    <!-- This article represents a self-contained item of information within the current section. -->
+                    <article class="card">
+                        <h3>Physical Sciences</h3>
+                        <p>Strengthen understanding of Physics, Chemistry and examination questions.</p>
+                    </article>
+                    <!-- This article represents a self-contained item of information within the current section. -->
+                    <article class="card">
+                        <h3>Life Sciences</h3>
+                        <p>Improve understanding of Life Sciences concepts, diagrams and revision material.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- The call-to-action encourages learners and parents to make an enquiry. -->
+        <section class="section">
+            <div class="container cta-strip">
+                <h2>Ready to Get Started?</h2>
+                <p>Choose a service, meet your potential tutor and take the next step towards academic success.</p>
+                <a class="button" href="pages/enquiry.html">Make an Enquiry</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- The footer contains repeated navigation and contact information. -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <!-- This article explains the organisation briefly in the footer. -->
+            <section>
+                <h2>Asa's Future Tutoring Centre</h2>
+                <p>Supporting learners in Grades 8–12 through personalised and accessible tutoring.</p>
+            </section>
+            <!-- The footer navigation provides a second way to access important pages. -->
+            <nav aria-label="Footer navigation">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="pages/about.html">About Us</a></li>
+                    <li><a href="pages/services.html">Services &amp; Tutors</a></li>
+                    <li><a href="pages/enquiry.html">Enquiry</a></li>
+                    <li><a href="pages/contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <!-- The address element semantically identifies contact information. -->
+            <!-- Quick social media links make the centre's online platforms easy to access from every page. -->
+            <section class="footer-social">
+                <h2>Quick Social Links</h2>
+                <div class="footer-social-links">
+                    <!-- Facebook link opens the official Facebook website in a new tab. -->
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Visit Facebook">
+                        <img src="assets/facebook.jpg" alt="Facebook logo">
+                        <span>Facebook</span>
+                    </a>
+                    <!-- Instagram link opens the official Instagram website in a new tab. -->
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Visit Instagram">
+                        <img src="assets/instagram.jpg" alt="Instagram logo">
+                        <span>Instagram</span>
+                    </a>
+                    <!-- WhatsApp link opens the official WhatsApp website in a new tab. -->
+                    <a href="https://www.whatsapp.com/" target="_blank" rel="noopener" aria-label="Visit WhatsApp">
+                        <img src="assets/whatsapp.jpg" alt="WhatsApp logo">
+                        <span>WhatsApp</span>
+                    </a>
+                </div>
+            </section>
+            <!-- The address element presents the centre contact information as semantic contact details. -->
+            <address>
+                <h2>Contact</h2>
+                <p>041 555 0123</p>
+                <p>info@asafuturetutoring.co.za</p>
+                <p>Gqeberha, Eastern Cape</p>
+            </address>
+        </div>
+        <!-- The copyright line identifies the year and organisation. -->
+        <p class="copyright">&copy; 2026 Asa's Future Tutoring Centre. All rights reserved.</p>
+    </footer>
+    <!-- End of all visible webpage content. -->
+</body>
+<!-- End of the complete HTML document. -->
+</html>
