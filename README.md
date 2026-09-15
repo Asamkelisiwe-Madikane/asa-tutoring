@@ -332,7 +332,7 @@ The homepage uses the slogan:
 
 File:
 
-```text
+
 pages/about.html
 ```
 
