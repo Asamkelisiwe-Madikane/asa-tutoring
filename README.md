@@ -489,13 +489,13 @@ folder.
 
 Example image files include:
 
-```text
+
 mathematics.jpg
 physical-science.jpg
 life-science.jpg
 online-tutoring.jpg
 asa-future-tutoring-logo.png
-```
+
 
 ---
 
@@ -505,9 +505,9 @@ CSS3 was used to style the website and improve its visual presentation.
 
 The stylesheet is located in:
 
-```text
+
 css/style.css
-```
+
 
 CSS was used for:
 
@@ -554,27 +554,27 @@ A consistent navigation menu is used throughout the website.
 
 The main navigation options are:
 
-```text
+
 Home
 About Us
 Services
 Enquiry
 Contact
-```
+
 
 Navigation links allow users to move between the different pages.
 
 The homepage is located at:
 
-```text
+
 /index.html
-```
+
 
 The other pages are located inside:
 
-```text
+
 /pages/
-```
+
 
 ---
 
@@ -597,9 +597,9 @@ Alternative text is added to images using the `alt` attribute.
 
 For example:
 
-```html
+
 <img src="assets/mathematics.jpg" alt="Mathematics tutoring">
-```
+
 
 This allows users who rely on assistive technologies to understand the purpose of the image.
 
