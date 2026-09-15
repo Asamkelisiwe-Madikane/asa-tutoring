@@ -1,1 +1,215 @@
+<!-- HTML5 document declaration tells the browser which HTML standard is being used. -->
+<!DOCTYPE html>
+<!-- The html element contains the complete webpage and declares English as the page language. -->
+<html lang="en">
+<!-- The head contains page settings, metadata and the link to the shared CSS file. -->
+<head>
+    <!-- Define the document character set. -->
+    <meta charset="UTF-8">
+    <!-- Make the contact page responsive. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Describe the contact information available on this page. -->
+    <meta name="description" content="Contact Asa's Future Tutoring Centre in Gqeberha, Eastern Cape.">
+    <!-- Set the browser tab title. -->
+    <title>Contact | Asa's Future Tutoring Centre</title>
+    <!-- Link to the shared external stylesheet. -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- End of the page metadata and stylesheet section. -->
+</head>
+<!-- The body contains all visible content displayed to website visitors. -->
+<body>
+    <!-- The header contains the organisation branding and navigation. -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="branding">
+                <!-- The logo is positioned in the top corner of the header and links back to Home. -->
+                <a class="corner-logo-link" href="../index.html" aria-label="Asa's Future Tutoring Centre Home">
+                    <img class="site-logo" src="../assets/asa-future-tutoring-logo.png" alt="Asa's Future Tutoring Centre logo">
+                </a>
+                <h1>Asa's Future Tutoring Centre</h1>
+                <p>Supporting Learners to Achieve Academic Success</p>
+            </div>
+        </div>
+        <!-- The navigation links to all main pages. -->
+        <nav class="site-nav" aria-label="Main navigation">
+            <!-- The hidden checkbox controls the mobile hamburger menu without requiring JavaScript. -->
+            <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Open or close navigation menu">
+            <!-- The label becomes the three-line hamburger button on smaller screens. -->
+            <label for="menu-toggle" class="hamburger" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <!-- The navigation list remains visible on larger screens and opens from the hamburger on mobile. -->
+            <div class="container nav-container">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services &amp; Tutors</a></li>
+                    <li><a href="enquiry.html">Enquiry</a></li>
+                    <li><a href="contact.html" aria-current="page">Contact</a></li>
+                </ul>
+            </div>
+        <!-- On small screens, the hamburger control above shows or hides this navigation list. -->
+        </nav>
+    </header>
+
+    <!-- Main contains contact details, a message form, map and social links. -->
+    <main>
+        <!-- The introduction tells visitors what they can do on the page. -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-heading">Contact Us</h2>
+                <p>We would love to hear from you. Contact Asa's Future Tutoring Centre for more information about our services.</p>
+            </div>
+        </section>
+
+        <!-- Contact details use the semantic address element. -->
+        <section class="section">
+            <div class="container info-grid">
+                <!-- The address element presents the centre contact information as semantic contact details. -->
+                <address class="info-card">
+                    <h2>Contact Information</h2>
+                    <p><strong>Telephone:</strong> 041 555 0123</p>
+                    <p><strong>Email:</strong> info@asafuturetutoring.co.za</p>
+                    <p><strong>Location:</strong> Gqeberha, Eastern Cape, South Africa</p>
+                    <p><strong>Hours:</strong> Monday–Friday 14:00–18:00; Saturday 09:00–13:00.</p>
+                </address>
+                <!-- This article gives an additional location note. -->
+                <article class="info-card">
+                    <h2>Learning Support</h2>
+                    <p>We offer in-person and online tutoring options for learners who need additional academic support.</p>
+                    <p>Use the enquiry form to tell us your grade, subject and preferred tutoring method.</p>
+                    <a class="button" href="enquiry.html">Make an Enquiry</a>
+                </article>
+            </div>
+        </section>
+
+        <!-- This form gives visitors another way to contact the centre. -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-heading">Send Us a Message</h2>
+                <!-- The form collects information entered by the visitor and provides a submit action. -->
+                <form action="#" method="post">
+                    <!-- The fieldset groups the contact form controls. -->
+                    <fieldset>
+                        <legend>Contact Form</legend>
+                        <div class="form-group">
+                            <!-- Full name input identifies the person making contact. -->
+                            <label for="name">Full Name:</label>
+                            <input type="text" id="name" name="name" autocomplete="name" required>
+                        </div>
+                        <div class="form-group">
+                            <!-- Email input uses built-in browser email validation. -->
+                            <label for="contact-email">Email Address:</label>
+                            <input type="email" id="contact-email" name="email" autocomplete="email" required>
+                        </div>
+                        <div class="form-group">
+                            <!-- Telephone input is suitable for phone numbers. -->
+                            <label for="contact-phone">Telephone Number:</label>
+                            <input type="tel" id="contact-phone" name="phone" autocomplete="tel">
+                        </div>
+                        <div class="form-group">
+                            <!-- The subject field gives context to the message. -->
+                            <label for="subject">Subject:</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <!-- The textarea provides space for a longer message. -->
+                            <label for="contact-message">Message:</label>
+                            <textarea id="contact-message" name="message" rows="7" required></textarea>
+                        </div>
+                    </fieldset>
+                    <!-- The submit button sends the form information. -->
+                    <button class="button" type="submit">Send Message</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- The map gives a visual indication of the centre's general location. -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-heading">Find Us on the Map</h2>
+                <p>Our tutoring centre is located in Gqeberha, Eastern Cape, South Africa.</p>
+                <!-- The iframe embeds a map without requiring additional JavaScript. -->
+                <iframe class="map-frame" src="https://www.google.com/maps?q=Gqeberha,+Eastern+Cape,+South+Africa&amp;output=embed" allowfullscreen loading="lazy" title="Map showing Gqeberha, Eastern Cape"></iframe>
+            </div>
+        </section>
+
+        <!-- Social media links are grouped in a semantic section. -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-heading">Connect With Us</h2>
+                <div class="social-links">
+                    <!-- Facebook logo and direct social-media link. -->
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Visit Facebook">
+                        <img src="../assets/facebook.jpg" alt="Facebook logo">
+                    </a>
+                    <!-- Instagram logo and direct social-media link. -->
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Visit Instagram">
+                        <img src="../assets/instagram.jpg" alt="Instagram logo">
+                    </a>
+                    <!-- WhatsApp logo and direct social-media link. -->
+                    <a href="https://www.whatsapp.com/" target="_blank" rel="noopener" aria-label="Visit WhatsApp">
+                        <img src="../assets/whatsapp.jpg" alt="WhatsApp Business logo">
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- The footer contains repeated navigation and contact information. -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <!-- This section groups related content into a meaningful semantic part of the page. -->
+            <section>
+                <h2>Asa's Future Tutoring Centre</h2>
+                <p>Supporting learners in Grades 8–12 through personalised tutoring.</p>
+            </section>
+            <!-- This nav element provides a group of navigation links for moving around the website. -->
+            <nav aria-label="Footer navigation">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services &amp; Tutors</a></li>
+                    <li><a href="enquiry.html">Enquiry</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <!-- Quick social media links make the centre's online platforms easy to access from every page. -->
+            <section class="footer-social">
+                <h2>Quick Social Links</h2>
+                <div class="footer-social-links">
+                    <!-- Facebook link opens the official Facebook website in a new tab. -->
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Visit Facebook">
+                        <img src="../assets/facebook.jpg" alt="Facebook logo">
+                        <span>Facebook</span>
+                    </a>
+                    <!-- Instagram link opens the official Instagram website in a new tab. -->
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Visit Instagram">
+                        <img src="../assets/instagram.jpg" alt="Instagram logo">
+                        <span>Instagram</span>
+                    </a>
+                    <!-- WhatsApp link opens the official WhatsApp website in a new tab. -->
+                    <a href="https://www.whatsapp.com/" target="_blank" rel="noopener" aria-label="Visit WhatsApp">
+                        <img src="../assets/whatsapp.jpg" alt="WhatsApp logo">
+                        <span>WhatsApp</span>
+                    </a>
+                </div>
+            </section>
+            <!-- The address element presents the centre contact information as semantic contact details. -->
+            <address>
+                <h2>Contact</h2>
+                <p>041 555 0123</p>
+                <p>info@asafuturetutoring.co.za</p>
+                <p>Gqeberha, Eastern Cape</p>
+            </address>
+        </div>
+        <p class="copyright">&copy; 2026 Asa's Future Tutoring Centre. All rights reserved.</p>
+    </footer>
+    <!-- End of all visible webpage content. -->
+</body>
+<!-- End of the complete HTML document. -->
+</html>
 
