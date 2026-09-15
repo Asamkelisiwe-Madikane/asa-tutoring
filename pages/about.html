@@ -1,165 +1,174 @@
+<!-- HTML5 document declaration tells the browser which HTML standard is being used. -->
 <!DOCTYPE html>
+<!-- The html element contains the complete webpage and declares English as the page language. -->
 <html lang="en">
-
+<!-- The head contains page settings, metadata and the link to the shared CSS file. -->
 <head>
+    <!-- Define the document character set. -->
     <meta charset="UTF-8">
+    <!-- Make the layout responsive on phones and tablets. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="About Asa's Future Tutoring Centre">
+    <!-- Describe the purpose of the page. -->
+    <meta name="description" content="Learn about Asa's Future Tutoring Centre, its mission, vision, values and tutors.">
+    <!-- Set the browser tab title. -->
     <title>About Us | Asa's Future Tutoring Centre</title>
+    <!-- Link this page to the shared external CSS stylesheet. -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- End of the page metadata and stylesheet section. -->
 </head>
-
+<!-- The body contains all visible content displayed to website visitors. -->
 <body>
-
-    <header>
-<!--   -->
-
-    <img src="../assets/assets/asa-future-tutoring-logo.png"
-         alt="Asa's Future Tutoring Centre logo"
-         width="400">
-
-    <h1>Asa's Future Tutoring Centre</h1>
-
-    <p>Supporting Learners to Achieve Academic Success</p>
-
-    <nav>
-        <a href="../index.html">Home</a> |
-        <a href="./about.html">About Us</a> |
-        <a href="./services.html">Services</a> |
-        <a href="./enquiry.html">Enquiry</a> |
-        <a href="./contact.html">Contact</a>
-    </nav>
-
+    <!-- The header contains branding and site-wide navigation. -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <!-- The logo is positioned in the top corner of the header and links back to Home. -->
+            <div class="branding">
+                <a class="corner-logo-link" href="../index.html" aria-label="Asa's Future Tutoring Centre Home">
+                    <img class="site-logo" src="../assets/asa-future-tutoring-logo.png" alt="Asa's Future Tutoring Centre logo">
+                </a>
+                <h1>Asa's Future Tutoring Centre</h1>
+                <p>Supporting Learners to Achieve Academic Success</p>
+            </div>
+        </div>
+        <!-- The navigation links to the main website sections. -->
+        <nav class="site-nav" aria-label="Main navigation">
+            <!-- The hidden checkbox controls the mobile hamburger menu without requiring JavaScript. -->
+            <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Open or close navigation menu">
+            <!-- The label becomes the three-line hamburger button on smaller screens. -->
+            <label for="menu-toggle" class="hamburger" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <!-- The navigation list remains visible on larger screens and opens from the hamburger on mobile. -->
+            <div class="container nav-container">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about.html" aria-current="page">About Us</a></li>
+                    <li><a href="services.html">Services &amp; Tutors</a></li>
+                    <li><a href="enquiry.html">Enquiry</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        <!-- On small screens, the hamburger control above shows or hides this navigation list. -->
+        </nav>
     </header>
 
+    <!-- The main element contains the unique information about the organisation. -->
     <main>
-
-        <section>
-            <h2>About Us</h2>
-
-            <p>
-                Learn more about our purpose, values and commitment to learners.
-            </p>
+        <!-- The introductory section establishes the page topic. -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-heading">About Us</h2>
+                <p>Learn more about our purpose, values and commitment to learners.</p>
+            </div>
         </section>
 
-        <hr>
-
-        <section>
-            <h2>Our Story</h2>
-
-            <h3>Supporting Learners Since 2022</h3>
-
-            <p>
-                Asa's Future Tutoring Centre was established in 2022 in
-                Gqeberha, Eastern Cape, to provide affordable and accessible
-                academic support to learners.
-            </p>
-
-            <p>
-                The centre focuses on personalised tutoring, revision and
-                examination preparation to help learners build confidence
-                and improve their academic performance.
-            </p>
+        <!-- The story section explains the background of the fictional organisation. -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-heading">Our Story</h2>
+                <!-- This article represents a self-contained item of information within the current section. -->
+                <article class="info-card">
+                    <h3>Supporting Learners Since 2022</h3>
+                    <p>Asa's Future Tutoring Centre was established in 2022 in Gqeberha, Eastern Cape, to provide affordable and accessible academic support to learners.</p>
+                    <p>The centre focuses on personalised tutoring, revision and examination preparation to help learners build confidence and improve their academic performance.</p>
+                </article>
+            </div>
         </section>
 
-        <hr>
-
-        <section>
-            <h2>Our Mission</h2>
-
-            <p>
-                Our mission is to enable every learner to achieve their full
-                potential through the delivery of the highest quality tutoring,
-                tailored and delivered in such a way that builds confidence
-                for lifelong learning.
-            </p>
-
-            <h2>Our Vision</h2>
-
-            <p>
-                Our vision is to give every learner the confidence, skills,
-                and curiosity to thrive in an ever-changing world.
-                Core values include excellence, respect, innovation,
-                and student success.
-            </p>
+        <!-- Mission and vision are grouped as related organisational statements. -->
+        <section class="section">
+            <div class="container info-grid">
+                <!-- This article represents a self-contained item of information within the current section. -->
+                <article class="info-card">
+                    <h2>Our Mission</h2>
+                    <p>Our mission is to enable every learner to achieve their full potential through high-quality tutoring tailored to individual learning needs.</p>
+                </article>
+                <!-- This article represents a self-contained item of information within the current section. -->
+                <article class="info-card">
+                    <h2>Our Vision</h2>
+                    <p>Our vision is to give every learner the confidence, skills and curiosity to thrive in an ever-changing world.</p>
+                </article>
+            </div>
         </section>
 
-        <hr>
-
-        <section>
-            <h2>Our Values</h2>
-
-            <h3>Excellence</h3>
-
-            <p>
-                We set high goals for ourselves and our learners.
-            </p>
-
-            <h3>Integrity</h3>
-
-            <p>
-                When it comes to our work, we act honestly and responsibly.
-            </p>
-
-            <h3>Respect</h3>
-
-            <p>
-                There's always a place for every learner, and we treat each
-                other with dignity and respect.
-            </p>
+        <!-- The values section uses articles so each value is a self-contained topic. -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-heading">Our Values</h2>
+                <div class="card-grid">
+                    <!-- This article represents a self-contained item of information within the current section. -->
+                    <article class="card"><h3>Excellence</h3><p>We set high goals for ourselves and our learners.</p></article>
+                    <!-- This article represents a self-contained item of information within the current section. -->
+                    <article class="card"><h3>Integrity</h3><p>We act honestly and responsibly in our work with learners and families.</p></article>
+                    <!-- This article represents a self-contained item of information within the current section. -->
+                    <article class="card"><h3>Respect</h3><p>We treat every learner with dignity and respect.</p></article>
+                </div>
+            </div>
         </section>
 
-        <hr>
-
-        <section>
-            <h2>Our Tutors</h2>
-
-            <h3>Dedicated Academic Support</h3>
-
-            <p>
-                Our tutors provide subject-focused guidance and help learners
-                prepare for assessments and examinations.
-            </p>
-
-            <p>
-                They are passionate about education and committed to helping
-                learners achieve their academic goals.
-            </p>
+        <!-- This section introduces the tutors and directs visitors to their detailed profiles. -->
+        <section class="section">
+            <div class="container cta-strip">
+                <h2>Meet Our Tutors</h2>
+                <p>Our subject-focused tutors are committed to helping learners achieve their academic goals.</p>
+                <a class="button" href="services.html">View Tutors and Services</a>
+            </div>
         </section>
-
     </main>
 
-    <hr>
-
-    <footer>
-
-        <h2>Asa's Future Tutoring Centre</h2>
-
-        <p>
-            We are dedicated to supporting learners in Gqeberha and the
-            surrounding areas to achieve academic success.
-        </p>
-
-        <h3>Quick Links</h3>
-
-        <a href="../index.html">Home</a> |
-        <a href="./about.html">About Us</a> |
-        <a href="./services.html">Services</a> |
-        <a href="./enquiry.html">Enquiry</a> |
-        <a href="./contact.html">Contact</a>
-
-        <h3>Contact Information</h3>
-
-        <p>Phone: 041 555 0123</p>
-        <p>Email: info@asafuturetutoring.co.za</p>
-        <p>Location: Gqeberha, Eastern Cape</p>
-
-        <p>
-            &copy; 2026 Asa's Future Tutoring Centre.
-            All rights reserved.
-        </p>
-
+    <!-- The footer repeats useful links and contact details. -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <!-- This section groups related content into a meaningful semantic part of the page. -->
+            <section>
+                <h2>Asa's Future Tutoring Centre</h2>
+                <p>Supporting learners in Gqeberha and surrounding areas to achieve academic success.</p>
+            </section>
+            <!-- This nav element provides a group of navigation links for moving around the website. -->
+            <nav aria-label="Footer navigation">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services &amp; Tutors</a></li>
+                    <li><a href="enquiry.html">Enquiry</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <!-- Quick social media links make the centre's online platforms easy to access from every page. -->
+            <section class="footer-social">
+                <h2>Quick Social Links</h2>
+                <div class="footer-social-links">
+                    <!-- Facebook link opens the official Facebook website in a new tab. -->
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Visit Facebook">
+                        <img src="../assets/facebook.jpg" alt="Facebook logo">
+                        <span>Facebook</span>
+                    </a>
+                    <!-- Instagram link opens the official Instagram website in a new tab. -->
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Visit Instagram">
+                        <img src="../assets/instagram.jpg" alt="Instagram logo">
+                        <span>Instagram</span>
+                    </a>
+                    <!-- WhatsApp link opens the official WhatsApp website in a new tab. -->
+                    <a href="https://www.whatsapp.com/" target="_blank" rel="noopener" aria-label="Visit WhatsApp">
+                        <img src="../assets/whatsapp.jpg" alt="WhatsApp logo">
+                        <span>WhatsApp</span>
+                    </a>
+                </div>
+            </section>
+            <!-- The address element presents the centre contact information as semantic contact details. -->
+            <address>
+                <h2>Contact</h2>
+                <p>041 555 0123</p>
+                <p>info@asafuturetutoring.co.za</p>
+                <p>Gqeberha, Eastern Cape</p>
+            </address>
+        </div>
+        <p class="copyright">&copy; 2026 Asa's Future Tutoring Centre. All rights reserved.</p>
     </footer>
-
+    <!-- End of all visible webpage content. -->
 </body>
-
+<!-- End of the complete HTML document. -->
 </html>
