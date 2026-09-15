@@ -613,14 +613,14 @@ Forms use appropriate input types where applicable.
 
 Examples include:
 
-```html
+
 <input type="text">
 <input type="email">
 <input type="tel">
 <select>
 <textarea>
 <button>
-```
+
 
 Form labels are included to clearly identify the information that users are expected to enter.
 
@@ -673,21 +673,21 @@ Because the homepage is stored in the root directory and the other pages are sto
 
 For example, from the homepage:
 
-```html
+
 <a href="pages/about.html">About Us</a>
-```
+
 
 From a page inside the `pages` folder, a link back to the homepage uses:
 
-```html
+
 <a href="../index.html">Home</a>
-```
+
 
 This prevents errors such as:
 
-```text
+
 Cannot GET /pages/index.html
-```
+
 
 ---
 
@@ -697,23 +697,22 @@ Image paths were checked to ensure that images are stored in the correct folder.
 
 The project uses:
 
-```text
+
 assets/
-```
+
 
 for images.
 
 From the homepage:
 
-```html
+
 <img src="assets/asa-future-tutoring-logo.png" alt="Asa's Future Tutoring Centre logo">
-```
 
 From a page inside the `pages` folder:
 
-```html
+
 <img src="../assets/asa-future-tutoring-logo.png" alt="Asa's Future Tutoring Centre logo">
-```
+
 
 Using the correct relative path prevents images from displaying as broken images.
 
@@ -725,19 +724,19 @@ The website uses lowercase folder names to reduce path and case-sensitivity prob
 
 The main folders are:
 
-```text
+
 pages
 assets
 css
-```
+
 
 The project avoids inconsistent folder names such as:
 
-```text
+
 Pages
 Assets
 CSS
-```
+
 
 because GitHub Pages and web servers can treat uppercase and lowercase paths as different locations.
 
@@ -763,15 +762,15 @@ GitHub was used for:
 
 Repository:
 
-```text
+
 Asa-s_Future_Tutoring_Centre
-```
+
 
 GitHub account:
 
-```text
+
 Asamkelisiwe-Madikane
-```
+
 
 ---
 
@@ -781,15 +780,15 @@ The website was prepared for deployment using GitHub Pages.
 
 The homepage file must be located in the root directory:
 
-```text
+
 index.html
-```
+
 
 The other pages are stored inside:
 
-```text
+
 pages/
-```
+
 
 The GitHub Pages website is:
 
