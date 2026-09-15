@@ -265,34 +265,7 @@ The website was developed using:
 
 HTML was used to create the structure and content of the website.
 
-The website uses HTML elements such as:
-
-* `<!DOCTYPE html>`
-* `<html>`
-* `<head>`
-* `<title>`
-* `<meta>`
-* `<body>`
-* `<header>`
-* `<nav>`
-* `<main>`
-* `<section>`
-* `<article>`
-* `<footer>`
-* `<h1>`
-* `<h2>`
-* `<h3>`
-* `<p>`
-* `<ul>`
-* `<li>`
-* `<a>`
-* `<img>`
-* `<form>`
-* `<label>`
-* `<input>`
-* `<select>`
-* `<textarea>`
-* `<button>`
+The website used many sementic elements
 
 Semantic HTML elements were used where appropriate to improve the organisation and accessibility of the website.
 
