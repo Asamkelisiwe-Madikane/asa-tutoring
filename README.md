@@ -402,7 +402,7 @@ The enquiry form is designed to collect information that can assist the tutoring
 File:
 
 pages/contact.html
-```
+
 
 The Contact page provides ways for users to communicate with the organisation.
 
