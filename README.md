@@ -304,7 +304,7 @@ Semantic HTML elements were used where appropriate to improve the organisation a
 
 File:
 
-```text
+
 index.html
 ```
 
