@@ -877,10 +877,7 @@ The website provides information about the following areas:
 * Mathematics
 * Physical Sciences
 * Life Sciences
-* English
-* Accounting
-* Business Studies
-* CAT
+
 
 ### Tutoring Services
 
@@ -961,7 +958,7 @@ The project uses the following technologies:
 | Technology   | Purpose                       |
 | ------------ | ----------------------------- |
 | HTML5        | Website structure and content |
-| CSS3         | Website styling and layout    |
+| CSS          | Website styling and layout    |
 | Git          | Version control               |
 | GitHub       | Repository hosting            |
 | GitHub Pages | Website deployment            |
@@ -986,34 +983,11 @@ Testing included:
 
 ---
 
-# 42. Final Testing Checklist
 
-Before final submission, the following checklist should be completed:
-
-* [x] `index.html` exists in the root directory.
-* [x] About page exists.
-* [x] Services page exists.
-* [x] Enquiry page exists.
-* [x] Contact page exists.
-* [x] Navigation links have been checked.
-* [x] Images are stored in the `assets` folder.
-* [x] CSS is stored in the `css` folder.
-* [x] Image paths have been checked.
-* [x] CSS paths have been checked.
-* [x] Forms have been checked.
-* [x] Social-media icons have been added.
-* [x] Map has been added.
-* [x] Online tutoring has been included.
-* [x] Responsive design has been considered.
-* [x] Accessibility has been considered.
-* [x] README documentation has been added.
-* [x] Git commits have been made.
-* [x] Repository is public.
-* [x] GitHub Pages deployment has been configured.
 
 ---
 
-# 43. Project Outcome
+# 42. Project Outcome
 
 The completed project provides a structured and user-friendly website for the fictional Asa's Future Tutoring Centre.
 
@@ -1035,7 +1009,7 @@ The final website provides learners and parents with information about the organ
 
 ---
 
-# 44. References
+# 43. References
 
 The following resources were consulted for general web-development information and technical guidance.
 
@@ -1051,11 +1025,6 @@ Mozilla Developer Network (MDN). 2026. *CSS: Cascading Style Sheets*. Available 
 https://developer.mozilla.org/en-US/docs/Web/CSS
 Accessed: 15 September 2026.
 
-### Responsive Web Design
-
-Mozilla Developer Network (MDN). 2026. *Responsive design*. Available at:
-https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design
-Accessed: 15 September 2026.
 
 ### HTML Forms
 
@@ -1093,19 +1062,9 @@ World Wide Web Consortium (W3C). 2026. *CSS Validation Service*. Available at:
 https://jigsaw.w3.org/css-validator/
 Accessed: 15 September 2026.
 
----
 
-# 45. Declaration
 
-This website was developed as an academic web-development project for **Asa's Future Tutoring Centre**.
-
-The organisation represented in the website is fictional and was created for educational purposes.
-
-All website content, structure, styling and project documentation were developed as part of the website project.
-
----
-
-# 46. Author
+# 44. Author
 
 **Student:** Asamkelisiwe Madikane
 **Student Number:** ST10519703
