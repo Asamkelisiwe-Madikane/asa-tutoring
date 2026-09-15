@@ -1,0 +1,562 @@
+/* ==========================================================
+   ASA'S FUTURE TUTORING CENTRE - EXTERNAL STYLE SHEET
+   Part 2: CSS styling, layout and responsive design.
+   Comments explain the purpose of the main styling sections.
+   ========================================================== */
+
+/* Use a predictable box model so padding and borders are included in element widths. */
+* {
+    box-sizing: border-box;
+}
+
+/* Remove the browser's default body margin and set the main typography. */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #17365d;
+    background: #f7fbff;
+}
+
+/* Keep images responsive so they never overflow their containers. */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Create a reusable centered content area for all major page sections. */
+.container {
+    width: min(92%, 1150px);
+    margin: 0 auto;
+}
+
+/* Style the site header and make the logo and centre name easy to recognise. */
+.site-header {
+    background: #ffffff;
+    border-bottom: 4px solid #1f6fb2;
+}
+
+/* Arrange the header branding using Flexbox. */
+.header-inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    min-height: 105px;
+    padding: 1rem 0 1rem 105px;
+}
+
+/* Position the website logo neatly in the top-left corner of the header. */
+.corner-logo-link {
+    position: absolute;
+    top: 8px;
+    left: 0;
+    display: block;
+    line-height: 0;
+    border-radius: 0.5rem;
+}
+
+/* Make the top-left logo slightly bigger. */
+.site-logo {
+    display: block;
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+}
+
+/* Show a clear keyboard focus state around the logo link. */
+.corner-logo-link:focus {
+    outline: 3px solid #2f8bd3;
+    outline-offset: 3px;
+}
+
+/* Remove excessive default heading margins in the branding area. */
+.branding h1,
+.branding p {
+    margin: 0;
+}
+
+/* Make the organisation name prominent. */
+.branding h1 {
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+}
+
+/* Style the organisation tagline. */
+.branding p {
+    color: #1f6fb2;
+    font-weight: 700;
+}
+
+/* ==========================================================
+   RESPONSIVE HAMBURGER NAVIGATION
+   The checkbox + label approach keeps the mobile menu usable
+   without JavaScript while the full navigation remains visible
+   on laptops and larger screens.
+   ========================================================== */
+
+/* Hide the menu control on larger screens because the full navigation is already visible. */
+.menu-toggle,
+.hamburger {
+    display: none;
+}
+
+/* Keep the navigation container ready for the responsive menu. */
+.nav-container {
+    position: relative;
+}
+
+/* Give the navigation a strong visual identity. */
+.site-nav {
+    background: #123f6d;
+}
+
+/* Use Flexbox to display navigation links horizontally on larger screens. */
+.site-nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    list-style: none;
+    margin: 0;
+    padding: 0.5rem 0;
+}
+
+/* Style each navigation link as a clear clickable control. */
+.site-nav a {
+    display: block;
+    padding: 0.65rem 1rem;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 0.35rem;
+}
+
+/* Provide hover and keyboard focus feedback for accessibility. */
+.site-nav a:hover,
+.site-nav a:focus {
+    background: #2f8bd3;
+    outline: none;
+}
+
+/* Highlight the current page in the navigation. */
+.site-nav a[aria-current="page"] {
+    background: #2f8bd3;
+}
+
+/* Create a spacious hero area for important introductory content. */
+.hero {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, #e7f4ff, #ffffff);
+}
+
+/* Make hero headings responsive without needing many media queries. */
+.hero h2 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin: 0 0 0.75rem;
+}
+
+/* Style the slogan used in the hero section. */
+.slogan {
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    color: #1f6fb2;
+}
+
+/* Reusable button styling for calls to action. */
+.button {
+    display: inline-block;
+    padding: 0.75rem 1.2rem;
+    background: #1f6fb2;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 0.4rem;
+    font-weight: 700;
+    margin: 0.4rem 0.4rem 0.4rem 0;
+}
+
+/* Give buttons a visible hover/focus state. */
+.button:hover,
+.button:focus {
+    background: #123f6d;
+    outline: 3px solid #9ed4f5;
+}
+
+/* Add consistent vertical spacing to main content sections. */
+.section {
+    padding: 3rem 0;
+}
+
+/* Use a subtle heading style to separate page sections. */
+.section-heading {
+    margin-top: 0;
+    color: #123f6d;
+}
+
+/* Create responsive card grids using CSS Grid. */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+}
+
+/* Make a four-column tutor grid where the screen is wide enough. */
+.tutor-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1.25rem;
+}
+
+/* Give service and tutor cards a consistent visual treatment. */
+.card,
+.tutor-card,
+.info-card {
+    background: #ffffff;
+    border: 1px solid #cfe3f2;
+    border-radius: 0.8rem;
+    padding: 1.25rem;
+    box-shadow: 0 4px 12px rgba(18, 63, 109, 0.08);
+}
+
+/* Keep tutor portraits the same visual height and crop them neatly. */
+.tutor-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 0.6rem;
+}
+
+/* Style the tutor subject label. */
+.tutor-subject {
+    color: #1f6fb2;
+    font-weight: 800;
+}
+
+/* Add a soft highlight to the tutor quote. */
+.tutor-quote {
+    background: #eef8ff;
+    padding: 0.8rem;
+    border-left: 4px solid #2f8bd3;
+    font-style: italic;
+}
+
+/* Keep figure captions readable and compact. */
+figcaption {
+    margin-top: 0.5rem;
+    font-weight: 700;
+}
+
+/* Improve the appearance of lists used for values and sitemap items. */
+ul,
+ol {
+    padding-left: 1.4rem;
+}
+
+/* Use CSS Grid for the contact and information layouts. */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+}
+
+/* Style forms so labels and fields are easy to read. */
+form {
+    background: #ffffff;
+    padding: 1.5rem;
+    border: 1px solid #cfe3f2;
+    border-radius: 0.8rem;
+}
+
+/* Give fieldsets a clear grouping boundary. */
+fieldset {
+    border: 1px solid #cfe3f2;
+    border-radius: 0.6rem;
+    margin-bottom: 1.25rem;
+    padding: 1rem;
+}
+
+/* Make the group title visually clear. */
+legend {
+    padding: 0 0.5rem;
+    font-weight: 800;
+    color: #123f6d;
+}
+
+/* Stack labels and controls cleanly. */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+/* Keep labels visually connected to their form controls. */
+label {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-weight: 700;
+}
+
+/* Style text fields, selections and text areas consistently. */
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 0.7rem;
+    border: 1px solid #9ebbd1;
+    border-radius: 0.4rem;
+    font: inherit;
+}
+
+/* Allow users to resize only text areas vertically. */
+textarea {
+    resize: vertical;
+}
+
+/* Make the submit button consistent with the site's other calls to action. */
+button {
+    border: 0;
+    cursor: pointer;
+}
+
+/* Ensure embedded maps do not exceed the content width. */
+.map-frame {
+    width: 100%;
+    min-height: 380px;
+    border: 0;
+    border-radius: 0.6rem;
+}
+
+/* Arrange social links neatly in a flexible row. */
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+}
+
+/* Keep social media logos compact. */
+.social-links img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+/* Highlight the tutor call-to-action strip. */
+.cta-strip {
+    background: #e7f4ff;
+    padding: 1.5rem;
+    border-radius: 0.8rem;
+    text-align: center;
+}
+
+/* Remove default list styling from footer navigation. */
+.site-footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style quick social links so each platform is easy to identify and click. */
+.footer-social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+}
+
+.footer-social-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.footer-social-links img {
+    width: 36px;
+    height: 36px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.footer-social-links a:hover,
+.footer-social-links a:focus {
+    text-decoration: underline;
+    outline: 2px solid #9ed4f5;
+    outline-offset: 3px;
+}
+
+/* Style the site footer with a contrasting background. */
+.site-footer {
+    background: #123f6d;
+    color: #ffffff;
+    padding: 2.5rem 0;
+}
+
+/* Use a four-column footer grid for organisation, navigation, contact and social links. */
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 2rem;
+}
+
+/* Keep footer links readable against the dark background. */
+.site-footer a {
+    color: #ffffff;
+}
+
+/* Make the copyright line visually distinct. */
+.copyright {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.35);
+    text-align: center;
+}
+
+/* ==========================================================
+   RESPONSIVE BREAKPOINT 1: TABLETS / SMALL LAPTOPS
+   The multi-column grids collapse to fewer columns here.
+   ========================================================== */
+
+@media (max-width: 950px) {
+    .tutor-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .card-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .header-inner {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* ==========================================================
+   RESPONSIVE BREAKPOINT 2: MOBILE DEVICES
+   The layout becomes one column and navigation becomes vertical.
+   ========================================================== */
+
+@media (max-width: 650px) {
+    .container {
+        width: min(94%, 1150px);
+    }
+
+    /* Keep the larger logo visible and give the branding room beside it. */
+    .header-inner {
+        min-height: 115px;
+        padding-left: 100px;
+    }
+
+    /* Slightly reduce the logo on smaller devices while keeping it larger than before. */
+    .site-logo {
+        width: 75px;
+        height: 75px;
+    }
+
+    .corner-logo-link {
+        top: 8px;
+    }
+
+    .site-nav ul {
+        flex-direction: column;
+    }
+
+    .site-nav a {
+        text-align: center;
+    }
+
+    .tutor-grid,
+    .card-grid,
+    .info-grid,
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        padding: 2.5rem 0;
+    }
+
+    .section {
+        padding: 2rem 0;
+    }
+}
+
+/* Mobile navigation breakpoint: phones and narrow tablet screens use a hamburger menu. */
+@media (max-width: 700px) {
+    /* Show the hamburger button only on smaller screens. */
+    .hamburger {
+        display: flex;
+        width: 46px;
+        height: 42px;
+        margin: 0.5rem auto;
+        padding: 0.55rem;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+        cursor: pointer;
+        border: 2px solid #ffffff;
+        border-radius: 0.4rem;
+        background: #123f6d;
+    }
+
+    /* Draw the three lines that visually identify the hamburger button. */
+    .hamburger span {
+        display: block;
+        width: 100%;
+        height: 3px;
+        background: #ffffff;
+        border-radius: 2px;
+    }
+
+    /* Make the hamburger keyboard focus visible. */
+    .hamburger:focus-within {
+        outline: 3px solid #9ed4f5;
+        outline-offset: 2px;
+    }
+
+    /* Hide the navigation links until the visitor opens the hamburger menu. */
+    .site-nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.2rem;
+        padding: 0.5rem 0 0.8rem;
+    }
+
+    /* Show the navigation links when the hidden checkbox is selected. */
+    .menu-toggle:checked + .hamburger + .nav-container ul {
+        display: flex;
+    }
+
+    /* Give mobile navigation links comfortable touch targets. */
+    .site-nav a {
+        width: 100%;
+        text-align: center;
+        padding: 0.8rem 1rem;
+    }
+
+    /* Make the larger logo and text fit comfortably on narrow screens. */
+    .header-inner {
+        min-height: 105px;
+        padding-left: 92px;
+    }
+
+    /* Keep the logo slightly larger on mobile too. */
+    .site-logo {
+        width: 75px;
+        height: 75px;
+    }
+
+    /* Stack content grids so cards remain readable on phones. */
+    .card-grid,
+    .tutor-grid,
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+}
