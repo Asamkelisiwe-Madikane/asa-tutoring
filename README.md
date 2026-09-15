@@ -378,7 +378,7 @@ The page uses images to visually represent selected subjects and services.
 
 File:
 
-```text
+
 pages/enquiry.html
 ```
 
