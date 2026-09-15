@@ -238,7 +238,7 @@ assets/
 
 The stylesheet is stored inside:
 
-```text
+
 css/
 ```
 
