@@ -222,7 +222,7 @@ The homepage is stored in the root directory as:
 
 
 index.html
-```
+
 
 The other website pages are stored inside:
 
