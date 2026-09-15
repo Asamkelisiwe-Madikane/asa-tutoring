@@ -482,9 +482,8 @@ The project includes images representing:
 
 Images are stored in the:
 
-```text
 assets/
-```
+
 
 folder.
 
