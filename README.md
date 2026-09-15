@@ -226,13 +226,13 @@ index.html
 
 The other website pages are stored inside:
 
-```text
+
 pages/
-```
+
 
 Images and other media are stored inside:
 
-```text
+
 assets/
 ```
 
