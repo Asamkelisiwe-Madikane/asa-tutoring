@@ -1,1 +1,201 @@
+<!-- HTML5 document declaration tells the browser which HTML standard is being used. -->
+<!DOCTYPE html>
+<!-- The html element contains the complete webpage and declares English as the page language. -->
+<html lang="en">
+<!-- The head contains page settings, metadata and the link to the shared CSS file. -->
+<head>
+    <!-- Define the document character set. -->
+    <meta charset="UTF-8">
+    <!-- Make the form usable on mobile devices. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Describe the purpose of the enquiry page. -->
+    <meta name="description" content="Make an enquiry about tutoring services at Asa's Future Tutoring Centre.">
+    <!-- Set the browser tab title. -->
+    <title>Enquiry | Asa's Future Tutoring Centre</title>
+    <!-- Link to the shared external stylesheet. -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- End of the page metadata and stylesheet section. -->
+</head>
+<!-- The body contains all visible content displayed to website visitors. -->
+<body>
+    <!-- The header provides consistent branding and navigation. -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="branding">
+                <!-- The logo is positioned in the top corner of the header and links back to Home. -->
+                <a class="corner-logo-link" href="../index.html" aria-label="Asa's Future Tutoring Centre Home">
+                    <img class="site-logo" src="../assets/asa-future-tutoring-logo.png" alt="Asa's Future Tutoring Centre logo">
+                </a>
+                <h1>Asa's Future Tutoring Centre</h1>
+                <p>Supporting Learners to Achieve Academic Success</p>
+            </div>
+        </div>
+        <!-- The navigation gives access to every main page. -->
+        <nav class="site-nav" aria-label="Main navigation">
+            <!-- The hidden checkbox controls the mobile hamburger menu without requiring JavaScript. -->
+            <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Open or close navigation menu">
+            <!-- The label becomes the three-line hamburger button on smaller screens. -->
+            <label for="menu-toggle" class="hamburger" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <!-- The navigation list remains visible on larger screens and opens from the hamburger on mobile. -->
+            <div class="container nav-container">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services &amp; Tutors</a></li>
+                    <li><a href="enquiry.html" aria-current="page">Enquiry</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        <!-- On small screens, the hamburger control above shows or hides this navigation list. -->
+        </nav>
+    </header>
+
+    <!-- Main content contains the enquiry instructions and form. -->
+    <main>
+        <!-- This section introduces the purpose of the enquiry form. -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-heading">Make an Enquiry</h2>
+                <p>Tell us what support you need and we will help you choose the right tutoring service and tutor.</p>
+            </div>
+        </section>
+
+        <!-- The form is grouped into semantic fieldsets to improve structure and usability. -->
+        <section class="section">
+            <div class="container">
+                <!-- The form collects information entered by the visitor and provides a submit action. -->
+                <form action="#" method="post">
+                    <!-- Personal details are grouped together in this fieldset. -->
+                    <fieldset>
+                        <legend>Learner Information</legend>
+                        <div class="form-group">
+                            <!-- The label is explicitly connected to the first-name input. -->
+                            <label for="first">First Name:</label>
+                            <input type="text" id="first" name="first" autocomplete="given-name" required>
+                        </div>
+                        <div class="form-group">
+                            <!-- The label is explicitly connected to the surname input. -->
+                            <label for="surname">Surname:</label>
+                            <input type="text" id="surname" name="surname" autocomplete="family-name" required>
+                        </div>
+                        <div class="form-group">
+                            <!-- Email input enables browser email validation. -->
+                            <label for="email">Email Address:</label>
+                            <input type="email" id="email" name="email" autocomplete="email" required>
+                        </div>
+                        <div class="form-group">
+                            <!-- Telephone input is appropriate for phone numbers on mobile devices. -->
+                            <label for="phone">Telephone Number:</label>
+                            <input type="tel" id="phone" name="phone" autocomplete="tel" required>
+                        </div>
+                    </fieldset>
+
+                    <!-- Tutoring preferences are grouped in a second fieldset. -->
+                    <fieldset>
+                        <legend>Tutoring Requirements</legend>
+                        <div class="form-group">
+                            <!-- The grade select allows the learner to choose their school grade. -->
+                            <label for="grade">Grade:</label>
+                            <select id="grade" name="grade" required>
+                                <option value="">Select grade</option>
+                                <option value="grade8">Grade 8</option>
+                                <option value="grade9">Grade 9</option>
+                                <option value="grade10">Grade 10</option>
+                                <option value="grade11">Grade 11</option>
+                                <option value="grade12">Grade 12</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <!-- The subject options match the services currently offered by the centre. -->
+                            <label for="subject">Subject:</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Select subject</option>
+                                <option value="mathematics">Mathematics</option>
+                                <option value="physical-sciences">Physical Sciences</option>
+                                <option value="life-sciences">Life Sciences</option>
+                                <option value="online-tutoring">Online Tutoring</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <!-- The tutoring method select records the learner's preferred lesson format. -->
+                            <label for="method">Preferred Tutoring Method:</label>
+                            <select id="method" name="method" required>
+                                <option value="">Select method</option>
+                                <option value="in-person">In-person</option>
+                                <option value="online">Online</option>
+                                <option value="either">Either</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <!-- The message area allows the learner to explain their needs. -->
+                            <label for="message">Message:</label>
+                            <textarea id="message" name="message" rows="7" required></textarea>
+                        </div>
+                    </fieldset>
+
+                    <!-- The submit button sends the completed form to the form action. -->
+                    <button class="button" type="submit">Submit Enquiry</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- The footer contains quick links and contact information. -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <!-- This section groups related content into a meaningful semantic part of the page. -->
+            <section>
+                <h2>Asa's Future Tutoring Centre</h2>
+                <p>Supporting learners in Grades 8–12 through personalised tutoring.</p>
+            </section>
+            <!-- This nav element provides a group of navigation links for moving around the website. -->
+            <nav aria-label="Footer navigation">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services &amp; Tutors</a></li>
+                    <li><a href="enquiry.html">Enquiry</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <!-- Quick social media links make the centre's online platforms easy to access from every page. -->
+            <section class="footer-social">
+                <h2>Quick Social Links</h2>
+                <div class="footer-social-links">
+                    <!-- Facebook link opens the official Facebook website in a new tab. -->
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Visit Facebook">
+                        <img src="../assets/facebook.jpg" alt="Facebook logo">
+                        <span>Facebook</span>
+                    </a>
+                    <!-- Instagram link opens the official Instagram website in a new tab. -->
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Visit Instagram">
+                        <img src="../assets/instagram.jpg" alt="Instagram logo">
+                        <span>Instagram</span>
+                    </a>
+                    <!-- WhatsApp link opens the official WhatsApp website in a new tab. -->
+                    <a href="https://www.whatsapp.com/" target="_blank" rel="noopener" aria-label="Visit WhatsApp">
+                        <img src="../assets/whatsapp.jpg" alt="WhatsApp logo">
+                        <span>WhatsApp</span>
+                    </a>
+                </div>
+            </section>
+            <!-- The address element presents the centre contact information as semantic contact details. -->
+            <address>
+                <h2>Contact</h2>
+                <p>041 555 0123</p>
+                <p>info@asafuturetutoring.co.za</p>
+                <p>Gqeberha, Eastern Cape</p>
+            </address>
+        </div>
+        <p class="copyright">&copy; 2026 Asa's Future Tutoring Centre. All rights reserved.</p>
+    </footer>
+    <!-- End of all visible webpage content. -->
+</body>
+<!-- End of the complete HTML document. -->
+</html>
 
