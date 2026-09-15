@@ -369,7 +369,6 @@ The services include:
 * Physical Sciences.
 * Life Sciences.
 * English.
-* Accounting.
 * Business Studies.
 * Computer Applications Technology (CAT).
 * Exam Preparation.
