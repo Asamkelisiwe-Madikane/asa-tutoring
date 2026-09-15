@@ -378,9 +378,7 @@ The page uses images to visually represent selected subjects and services.
 
 File:
 
-
 pages/enquiry.html
-
 
 The Enquiry page contains an enquiry form.
 
@@ -403,7 +401,6 @@ The enquiry form is designed to collect information that can assist the tutoring
 
 File:
 
-```text
 pages/contact.html
 ```
 
