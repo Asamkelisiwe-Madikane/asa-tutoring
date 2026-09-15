@@ -163,7 +163,7 @@ The website also provides users with a way to submit enquiries and contact the o
 
 The sitemap represents the hierarchy and navigation structure of the website.
 
-```text
+
                     ASA'S FUTURE
                   TUTORING CENTRE
                          |
@@ -177,7 +177,7 @@ The sitemap represents the hierarchy and navigation structure of the website.
         Mathematics   Physical Sciences   Life Sciences
                                |
                         Online Tutoring
-```
+
 
 The main navigation pages are:
 
@@ -193,7 +193,6 @@ The main navigation pages are:
 
 The website uses the following basic folder structure:
 
-```text
 Asa-s_Future_Tutoring_Centre/
 │
 ├── index.html
