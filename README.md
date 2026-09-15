@@ -359,7 +359,7 @@ File:
 
 
 pages/services.html
-```
+
 
 The Services page explains the academic services offered by the tutoring centre.
 
