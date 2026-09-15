@@ -220,7 +220,7 @@ Asa-s_Future_Tutoring_Centre/
 
 The homepage is stored in the root directory as:
 
-```text
+
 index.html
 ```
 
