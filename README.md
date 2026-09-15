@@ -476,6 +476,7 @@ The project includes images representing:
 * Physical Sciences.
 * Life Sciences.
 * Online Tutoring.
+*Tutors
 * Organisation logo.
 * Social-media platforms.
 
