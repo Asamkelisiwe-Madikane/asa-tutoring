@@ -1,2 +1,263 @@
+<!-- HTML5 document declaration tells the browser which HTML standard is being used. -->
+<!DOCTYPE html>
+<!-- The html element contains the complete webpage and declares English as the page language. -->
+<html lang="en">
+<!-- The head contains page settings, metadata and the link to the shared CSS file. -->
+<head>
+    <!-- Define the document character set. -->
+    <meta charset="UTF-8">
+    <!-- Make the service cards responsive on different screen sizes. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Describe the services and tutors provided on this page. -->
+    <meta name="description" content="View Mathematics, Physical Sciences, Life Sciences and Online Tutoring services and meet the tutors at Asa's Future Tutoring Centre.">
+    <!-- Set the browser tab title. -->
+    <title>Services &amp; Tutors | Asa's Future Tutoring Centre</title>
+    <!-- Link to the shared external CSS file. -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- End of the page metadata and stylesheet section. -->
+</head>
+<!-- The body contains all visible content displayed to website visitors. -->
+<body>
+    <!-- The site header provides consistent branding and navigation. -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="branding">
+                <!-- The logo is positioned in the top corner of the header and links back to Home. -->
+                <a class="corner-logo-link" href="../index.html" aria-label="Asa's Future Tutoring Centre Home">
+                    <img class="site-logo" src="../assets/asa-future-tutoring-logo.png" alt="Asa's Future Tutoring Centre logo">
+                </a>
+                <h1>Asa's Future Tutoring Centre</h1>
+                <p>Supporting Learners to Achieve Academic Success</p>
+            </div>
+        </div>
+        <!-- The navigation provides access to all major pages. -->
+        <nav class="site-nav" aria-label="Main navigation">
+            <!-- The hidden checkbox controls the mobile hamburger menu without requiring JavaScript. -->
+            <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Open or close navigation menu">
+            <!-- The label becomes the three-line hamburger button on smaller screens. -->
+            <label for="menu-toggle" class="hamburger" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <!-- The navigation list remains visible on larger screens and opens from the hamburger on mobile. -->
+            <div class="container nav-container">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html" aria-current="page">Services &amp; Tutors</a></li>
+                    <li><a href="enquiry.html">Enquiry</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        <!-- On small screens, the hamburger control above shows or hides this navigation list. -->
+        </nav>
+    </header>
+
+    <!-- Main contains the service descriptions and tutor profiles. -->
+    <main>
+        <!-- The introduction explains what visitors can find on the page. -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-heading">Our Services &amp; Tutors</h2>
+                <p>Choose a subject or online tutoring option and see the tutor you might meet.</p>
+            </div>
+        </section>
+
+        <!-- The services are presented as semantic article cards. -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-heading">Subjects We Offer</h2>
+                <div class="card-grid">
+                    <!-- Mathematics service article. -->
+                    <article class="card" id="mathematics">
+                        <!-- The figure groups an image with its related caption or visual description. -->
+                        <figure>
+                            <!-- Click the image to open a larger version for easier viewing. -->
+<a class="image-link" href="../assets/mathematics.jpg" target="_blank" rel="noopener" aria-label="View larger image: Mathematics tutoring materials">
+    <img src="../assets/mathematics.jpg" alt="Mathematics tutoring materials">
+</a>
+                            <figcaption>Mathematics</figcaption>
+                        </figure>
+                        <p>Build confidence in concepts, calculations, problem solving and examination questions.</p>
+                    </article>
+                    <!-- Physical Sciences service article. -->
+                    <article class="card" id="physical-sciences">
+                        <!-- The figure groups an image with its related caption or visual description. -->
+                        <figure>
+                            <!-- Click the image to open a larger version for easier viewing. -->
+<a class="image-link" href="../assets/physical science.jpg" target="_blank" rel="noopener" aria-label="View larger image: Physical Sciences tutoring materials">
+    <img src="../assets/physical science.jpg" alt="Physical Sciences tutoring materials">
+</a>
+                            <figcaption>Physical Sciences</figcaption>
+                        </figure>
+                        <p>Improve understanding of Physics, Chemistry, calculations and past-paper questions.</p>
+                    </article>
+                    <!-- Life Sciences service article. -->
+                    <article class="card" id="life-sciences">
+                        <!-- The figure groups an image with its related caption or visual description. -->
+                        <figure>
+                            <!-- Click the image to open a larger version for easier viewing. -->
+<a class="image-link" href="../assets/life Science.jpg" target="_blank" rel="noopener" aria-label="View larger image: Life Sciences tutoring materials">
+    <img src="../assets/life Science.jpg" alt="Life Sciences tutoring materials">
+</a>
+                            <figcaption>Life Sciences</figcaption>
+                        </figure>
+                        <p>Strengthen knowledge of Life Sciences concepts, diagrams, revision and assessment preparation.</p>
+                    </article>
+                    <!-- Online tutoring service article. -->
+                    <article class="card" id="online-tutoring">
+                        <!-- The figure groups an image with its related caption or visual description. -->
+                        <figure>
+                            <!-- Click the image to open a larger version for easier viewing. -->
+<a class="image-link" href="../assets/online-tutoring.jpg" target="_blank" rel="noopener" aria-label="View larger image: Learner attending an online tutoring session">
+    <img src="../assets/online-tutoring.jpg" alt="Learner attending an online tutoring session">
+</a>
+                            <figcaption>Online Tutoring</figcaption>
+                        </figure>
+                        <p>Receive flexible academic support online from a suitable tutor without needing to travel.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- This section is the main tutor area so learners can see who they may meet. -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-heading">Meet Our Tutors</h2>
+                <p>Our tutor profiles help learners understand who may support them during their lessons.</p>
+                <div class="tutor-grid">
+                    <!-- Tutor 1 is responsible for Mathematics. -->
+                    <article class="tutor-card">
+                        <!-- The figure groups an image with its related caption or visual description. -->
+                        <figure>
+                            <!-- Click the image to open a larger version for easier viewing. -->
+<a class="image-link" href="../assets/thandi-mokoena.jpg" target="_blank" rel="noopener" aria-label="View larger image: Portrait of Mathematics tutor Ms. Thandi Mokoena">
+    <img src="../assets/thandi-mokoena.jpg" alt="Portrait of Mathematics tutor Ms. Thandi Mokoena">
+</a>
+                            <figcaption>Ms. Thandi Mokoena</figcaption>
+                        </figure>
+                        <p class="tutor-subject">Mathematics Tutor</p>
+                        <p><strong>Qualification:</strong> BSc (Mathematics) | PGCE</p>
+                        <p><strong>Grades:</strong> 8–12</p>
+                        <p>Ms. Mokoena uses simple explanations and step-by-step practice to help learners understand mathematics.</p>
+                        <p class="tutor-quote">“Maths is not about being perfect; it is about making progress.”</p>
+                    </article>
+                    <!-- Tutor 2 is responsible for Physical Sciences. -->
+                    <article class="tutor-card">
+                        <!-- The figure groups an image with its related caption or visual description. -->
+                        <figure>
+                            <!-- Click the image to open a larger version for easier viewing. -->
+<a class="image-link" href="../assets/sipho-dlamini.jpg" target="_blank" rel="noopener" aria-label="View larger image: Portrait of Physical Sciences tutor Mr. Sipho Dlamini">
+    <img src="../assets/sipho-dlamini.jpg" alt="Portrait of Physical Sciences tutor Mr. Sipho Dlamini">
+</a>
+                            <figcaption>Mr. Sipho Dlamini</figcaption>
+                        </figure>
+                        <p class="tutor-subject">Physical Sciences Tutor</p>
+                        <p><strong>Qualification:</strong> BSc (Physics &amp; Chemistry) | PGCE</p>
+                        <p><strong>Grades:</strong> 8–12</p>
+                        <p>Mr. Dlamini uses practical examples and real-world applications to make science concepts easier to understand.</p>
+                        <p class="tutor-quote">“Science is not just a subject; it is a way of thinking.”</p>
+                    </article>
+                    <!-- Tutor 3 is responsible for Life Sciences. -->
+                    <article class="tutor-card">
+                        <!-- The figure groups an image with its related caption or visual description. -->
+                        <figure>
+                            <!-- Click the image to open a larger version for easier viewing. -->
+<a class="image-link" href="../assets/leanne-du-toit.jpg" target="_blank" rel="noopener" aria-label="View larger image: Portrait of Life Sciences tutor Ms. Leanne du Toit">
+    <img src="../assets/leanne-du-toit.jpg" alt="Portrait of Life Sciences tutor Ms. Leanne du Toit">
+</a>
+                            <figcaption>Ms. Leanne du Toit</figcaption>
+                        </figure>
+                        <p class="tutor-subject">Life Sciences Tutor</p>
+                        <p><strong>Qualification:</strong> BSc (Biology) | PGCE</p>
+                        <p><strong>Grades:</strong> 8–12</p>
+                        <p>Ms. du Toit provides clear explanations and personalised support for Life Sciences concepts and revision.</p>
+                        <p class="tutor-quote">“Understand today, protect tomorrow.”</p>
+                    </article>
+                    <!-- Tutor 4 is responsible for flexible online tutoring. -->
+                    <article class="tutor-card">
+                        <!-- The figure groups an image with its related caption or visual description. -->
+                        <figure>
+                            <!-- Click the image to open a larger version for easier viewing. -->
+<a class="image-link" href="../assets/naledi-phiri.jpg" target="_blank" rel="noopener" aria-label="View larger image: Portrait of Online Tutoring specialist Ms. Naledi Phiri">
+    <img src="../assets/naledi-phiri.jpg" alt="Portrait of Online Tutoring specialist Ms. Naledi Phiri">
+</a>
+                            <figcaption>Ms. Naledi Phiri</figcaption>
+                        </figure>
+                        <p class="tutor-subject">Online Tutoring Specialist</p>
+                        <p><strong>Qualification:</strong> BEd (Education) | PGCE</p>
+                        <p><strong>Grades:</strong> All supported grades</p>
+                        <p>Ms. Phiri uses digital tools and interactive methods to create a supportive online learning environment.</p>
+                        <p class="tutor-quote">“No distance is too far for your success.”</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- This call-to-action links learners directly to the enquiry form. -->
+        <section class="section">
+            <div class="container cta-strip">
+                <h2>Choose Your Tutor and Get Started</h2>
+                <p>Tell us which service you are interested in and we can help you choose the right tutoring option.</p>
+                <a class="button" href="enquiry.html">Make an Enquiry</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- The footer provides consistent contact and navigation information. -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <!-- This section groups related content into a meaningful semantic part of the page. -->
+            <section>
+                <h2>Asa's Future Tutoring Centre</h2>
+                <p>Helping learners achieve academic success through quality, personalised tutoring.</p>
+            </section>
+            <!-- This nav element provides a group of navigation links for moving around the website. -->
+            <nav aria-label="Footer navigation">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services &amp; Tutors</a></li>
+                    <li><a href="enquiry.html">Enquiry</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <!-- Quick social media links make the centre's online platforms easy to access from every page. -->
+            <section class="footer-social">
+                <h2>Quick Social Links</h2>
+                <div class="footer-social-links">
+                    <!-- Facebook link opens the official Facebook website in a new tab. -->
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Visit Facebook">
+                        <img src="../assets/facebook.jpg" alt="Facebook logo">
+                        <span>Facebook</span>
+                    </a>
+                    <!-- Instagram link opens the official Instagram website in a new tab. -->
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Visit Instagram">
+                        <img src="../assets/instagram.jpg" alt="Instagram logo">
+                        <span>Instagram</span>
+                    </a>
+                    <!-- WhatsApp link opens the official WhatsApp website in a new tab. -->
+                    <a href="https://www.whatsapp.com/" target="_blank" rel="noopener" aria-label="Visit WhatsApp">
+                        <img src="../assets/whatsapp.jpg" alt="WhatsApp logo">
+                        <span>WhatsApp</span>
+                    </a>
+                </div>
+            </section>
+            <!-- The address element presents the centre contact information as semantic contact details. -->
+            <address>
+                <h2>Contact</h2>
+                <p>041 555 0123</p>
+                <p>info@asafuturetutoring.co.za</p>
+                <p>Gqeberha, Eastern Cape</p>
+            </address>
+        </div>
+        <p class="copyright">&copy; 2026 Asa's Future Tutoring Centre. All rights reserved.</p>
+    </footer>
+    <!-- End of all visible webpage content. -->
+</body>
+<!-- End of the complete HTML document. -->
+</html>
 
 
