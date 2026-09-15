@@ -368,7 +368,6 @@ The services include:
 * Mathematics.
 * Physical Sciences.
 * Life Sciences.
-* Business Studies.
 * Computer Applications Technology (CAT).
 * Exam Preparation.
 * Online Tutoring.
