@@ -306,7 +306,7 @@ File:
 
 
 index.html
-```
+
 
 The homepage introduces visitors to Asa's Future Tutoring Centre.
 
