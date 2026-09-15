@@ -368,7 +368,6 @@ The services include:
 * Mathematics.
 * Physical Sciences.
 * Life Sciences.
-* Exam Preparation.
 * Online Tutoring.
 
 The page uses images to visually represent selected subjects and services.
