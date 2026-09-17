@@ -4,7 +4,7 @@
 
 Asa's Future Tutoring Centre is a fictional tutoring-centre website developed to provide learners and parents with information about tutoring services, subjects, enquiries, contact details and online tutoring.
 
-The website was created as part of a web development project and demonstrates the use of **HTML, CSS and web development principles** across Part 1, Part 2 and Part 3 of the project.
+The website was created as part of a web development project and demonstrates the use of **HTML, CSS and web development principles** across Part 1 and Part 2 of the project.
 
 ---
 
@@ -449,7 +449,7 @@ The project includes images representing:
 * Physical Sciences.
 * Life Sciences.
 * Online Tutoring.
-*Tutors
+* Tutors
 * Organisation logo.
 * Social-media platforms.
 
@@ -999,13 +999,6 @@ https://developer.mozilla.org/en-US/docs/Web/CSS
 Accessed: 15 September 2026.
 
 
-### HTML Forms
-
-Mozilla Developer Network (MDN). 2026. *Your first form*. Available at:
-https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Your_first_form
-Accessed: 15 September 2026.
-
-### Web Accessibility
 
 World Wide Web Consortium (W3C). 2026. *Web Accessibility Initiative*. Available at:
 https://www.w3.org/WAI/
