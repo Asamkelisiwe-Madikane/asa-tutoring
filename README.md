@@ -920,7 +920,7 @@ The final website follows this structure:
               Mission
               Vision
               Values
-```
+
 
 ---
 
@@ -953,10 +953,6 @@ Testing included:
 * Checking links.
 * Checking the website at different screen sizes.
 * Checking the published GitHub Pages website.
-
----
-
-
 
 ---
 
