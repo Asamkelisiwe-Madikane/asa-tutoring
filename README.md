@@ -645,7 +645,8 @@ pages/
 
 The website is published at:
 
-[Asa's Future Tutoring Centre – GitHub Pages](https://asamkelisiwe-madikane.github.io/?utm_source=chatgpt.com)
+[Asa's Future Tutoring Centre – GitHub Pages](https://asamkelisiwe-madikane.github.io/asa-tutoring/)
+
 
 The repository is intended to remain public so that the website can be accessed and assessed.
 
