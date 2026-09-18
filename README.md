@@ -769,7 +769,7 @@ The website provides learners and parents with information about the organisatio
 # ✅ CHANGELOG
 ## Changelog (Updates Made)
 - ✅ Added additional documentation details from **Part 1** into this ReadMe.
-- ✅ Improved the use of **semantic HTML** documentation by explicitly outlining semantic structure practices in the Part 1 section.
+- ✅ Improved the use of **semantic HTML elements** documentation by explicitly outlining semantic structure practices in the Part 1 section.
 - ✅ Enhanced clarity of **Part 1 feature explanations**, while keeping the rest of the ReadMe unchanged.
 - ✅ Added a clearer **changelog heading** describing the updates made.
 ---
