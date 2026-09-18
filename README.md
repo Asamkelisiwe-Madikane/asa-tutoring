@@ -1,198 +1,95 @@
-# Asa's Future Tutoring Centre
-
-## Website Development Project
-
-Asa's Future Tutoring Centre is a fictional tutoring-centre website developed to provide learners and parents with information about tutoring services, subjects, enquiries, contact details and online tutoring.
-
-The website was created as part of a web development project and demonstrates the use of **HTML, CSS and web development principles** across Part 1 and Part 2 of the project.
-
----
-
-# 1. Student Information
-
-| Information    | Details                              |
-| -------------- | ------------------------------------ |
-| Student Name   | Asamkelisiwe Madikane                |
-| Student Number | ST10519703                           |
-| Project Name   | Asa's Future Tutoring Centre         |
-| Project Type   | Tutoring Centre Website              |
-| Organisation   | Asa's Future Tutoring Centre         |
-| Location       | Gqeberha, Eastern Cape, South Africa |
-| Year           | 2026                                 |
-
----
-
-# 2. Project Overview
-
-Asa's Future Tutoring Centre is a fictional tutoring organisation created for this website project.
-
-The website is designed to provide learners and parents with easy access to information about academic support services.
-
-The website provides information about:
-
-* The tutoring centre.
-* The organisation's background.
-* Subjects offered.
-* Tutoring services.
-* Online tutoring.
-* Enquiries.
-* Contact information.
-* Social-media platforms.
-* The general location of the organisation.
-
-The website is designed to be simple, accessible and easy to navigate.
-
----
-
-# 3. Organisation Information
-
-## 3.1 Organisation Name
-
-**Asa's Future Tutoring Centre**
-
-## 3.2 Slogan
+# ASA'S FUTURE TUTORING CENTRE
 
 **Supporting Learners to Achieve Academic Success**
 
-## 3.3 Homepage Slogan
-
 **LEARN • GROW • SUCCEED**
 
-## 3.4 Organisation Type
+---
 
-Asa's Future Tutoring Centre is a fictional tutoring organisation created specifically for this academic website project.
+## 1. Project Overview
 
-## 3.5 Location
+Asa's Future Tutoring Centre is a fictional tutoring centre website developed as part of a web-development project.
 
-The organisation is based in:
+The purpose of the website is to provide learners and parents with information about the tutoring centre, academic subjects, tutoring services, online tutoring, enquiry options and contact information.
 
-**Gqeberha, Eastern Cape, South Africa**
+The website demonstrates the use of:
 
-## 3.6 Establishment
-
-The organisation was established in **2022** as part of the fictional organisation's background.
+* HTML5
+* CSS3
+* Forms
+* Images
+* Website navigation
+* Responsive web design
+* Accessibility principles
+* Git and GitHub
+* GitHub Pages
 
 ---
 
-# 4. Target Audience
+## 2. Organisation Information
 
-The website is aimed at:
+**Organisation:** Asa's Future Tutoring Centre
 
-* Grade 8 to Grade 12 learners.
+**Established:** 2022
+
+**Location:** Gqeberha, Eastern Cape, South Africa
+
+**Tagline:** Supporting Learners to Achieve Academic Success
+
+**Slogan:** LEARN • GROW • SUCCEED
+
+Asa's Future Tutoring Centre provides affordable and accessible academic support to learners. The centre focuses on personalised tutoring, revision, examination preparation and online tutoring.
+
+---
+
+## 3. Website Purpose
+
+The website was developed to:
+
+* Introduce Asa's Future Tutoring Centre.
+* Provide information about the organisation.
+* Display the academic subjects offered.
+* Explain the tutoring services available.
+* Provide an online tutoring option.
+* Allow learners and parents to submit enquiries.
+* Provide contact information.
+* Provide links to social-media platforms.
+* Provide location information through a map.
+* Demonstrate practical web-development skills.
+
+---
+
+## 4. Target Audience
+
+The main target users of the website are:
+
+* School learners.
 * Parents and guardians.
-* Learners who require additional academic support.
-* Learners preparing for tests and examinations.
-* Learners interested in online tutoring.
-* Learners looking for subject-specific tutoring.
-
-The website information is presented in a simple format so that learners and parents can easily find the information they require.
+* Learners looking for additional academic support.
+* Learners preparing for examinations.
+* People interested in online tutoring services.
 
 ---
 
-# 5. Website Objectives
+## 5. Website Pages
 
-The main objectives of the website are to:
+The website consists of the following main pages:
 
-1. Provide information about Asa's Future Tutoring Centre.
-2. Explain the tutoring services available.
-3. Provide information about the subjects offered.
-4. Allow learners and parents to make enquiries.
-5. Provide contact information.
-6. Provide information about online tutoring.
-7. Promote the tutoring centre through social-media platforms.
-8. Make important information easy to find.
-9. Provide a simple navigation system.
-10. Create an accessible and user-friendly website.
-11. Provide a professional online presence for the tutoring centre.
-12. Allow users to access the website using different screen sizes and devices.
+1. **Home** – `index.html`
+2. **About Us** – `pages/about.html`
+3. **Services** – `pages/services.html`
+4. **Enquiry** – `pages/enquiry.html`
+5. **Contact** – `pages/contact.html`
+
+The homepage is located in the root directory, while the remaining HTML pages are stored inside the `pages` folder.
 
 ---
 
-# 6. Project Parts
+## 6. Website Folder Structure
 
-The website project was developed in three main parts.
+The final project uses the following structure:
 
-## Part 1 – Planning and Website Structure
-
-Part 1 focused on planning the website before and during development.
-
-The activities included:
-
-* Selecting the organisation.
-* Identifying the target audience.
-* Establishing the purpose of the website.
-* Identifying the services offered.
-* Planning the website structure.
-* Creating a sitemap.
-* Planning website content.
-* Researching suitable content.
-* Identifying suitable images and media.
-* Planning navigation.
-* Identifying the required pages.
-* Creating the initial HTML structure.
-* Testing the basic website structure.
-
----
-
-# 7. Part 1 – Website Planning
-
-## 7.1 Organisation Selection
-
-The selected organisation was **Asa's Future Tutoring Centre**.
-
-The organisation was selected because a tutoring-centre website provides an opportunity to demonstrate different website-development features such as:
-
-* Navigation.
-* Forms.
-* Images.
-* Services.
-* Contact information.
-* Online tutoring.
-* Responsive design.
-* Social-media links.
-
-## 7.2 Website Purpose
-
-The purpose of the website is to provide learners and parents with information about the tutoring centre and its academic services.
-
-The website also provides users with a way to submit enquiries and contact the organisation.
-
----
-
-# 8. Website Sitemap
-
-The sitemap represents the hierarchy and navigation structure of the website.
-
-
-                    ASA'S FUTURE
-                  TUTORING CENTRE
-                         |
-        -----------------------------------------
-        |          |          |         |       |
-       HOME      ABOUT     SERVICES   ENQUIRY  CONTACT
-                  US           |
-                               |
-              --------------------------------
-              |              |               |
-        Mathematics   Physical Sciences   Life Sciences
-                               |
-                        Online Tutoring
-
-
-The main navigation pages are:
-
-* Home
-* About Us
-* Services
-* Enquiry
-* Contact
-
----
-
-# 9. Website File Structure
-
-The website uses the following basic folder structure:
-
+```text
 Asa-s_Future_Tutoring_Centre/
 │
 ├── index.html
@@ -207,650 +104,164 @@ Asa-s_Future_Tutoring_Centre/
 ├── assets/
 │   ├── asa-future-tutoring-logo.png
 │   ├── mathematics.jpg
-│   ├── physical-science.jpg
 │   ├── life-science.jpg
-│   ├── online-tutoring.jpg
-│   ├── facebook.png
-│   ├── instagram.png
-│   └── whatsapp.png
+│   └── online-tutoring.jpg
 │
 └── css/
     └── style.css
+```
 
-
-The homepage is stored in the root directory as:
-
-
-index.html
-
-
-The other website pages are stored inside:
-
-
-pages/
-
-
-Images and other media are stored inside:
-
-
-assets/
-
-
-The stylesheet is stored inside:
-
-
-css/
-
+The folder names are written in lowercase to reduce problems caused by differences between uppercase and lowercase file paths.
 
 ---
 
-# 10. Part 2 – Website Development
+## 7. Site Hierarchy
 
-Part 2 focused on developing and styling the website.
+The website follows a simple hierarchical structure:
 
-The website was developed using:
-
-* HTML5
-* CSS3
-* Responsive web-design principles
-* Images and multimedia
-* Forms
-* Navigation links
-* Social-media elements
-* Git and GitHub
-
----
-
-# 11. HTML Development
-
-HTML was used to create the structure and content of the website.
-
-The website used many sementic elements
-
-Semantic HTML elements were used where appropriate to improve the organisation and accessibility of the website.
+```text
+                    ASA'S FUTURE TUTORING CENTRE
+                              |
+        ------------------------------------------------
+        |          |          |          |             |
+       HOME      ABOUT     SERVICES   ENQUIRY       CONTACT
+        |          |          |          |             |
+     index.html    |          |       Form fields   Contact details
+                   |          |
+              Organisation   Academic Subjects
+              Information    |
+              Mission        -------------------------
+              Vision         |      |      |         |
+              Values        Maths  Physical  Life    Online
+                            Sciences Sciences Tutoring
+```
 
 ---
 
-# 12. Website Pages
+## 8. Navigation
 
-## 12.1 Home Page
+The navigation menu allows users to move between the main pages of the website.
 
-File:
-
-
-index.html
-
-
-The homepage introduces visitors to Asa's Future Tutoring Centre.
-
-The homepage includes:
-
-* Organisation name.
-* Logo.
-* Main slogan.
-* Introduction.
-* Navigation menu.
-* Tutoring information.
-* Call-to-action content.
-* Images.
-* Links to other pages.
-
-The homepage uses the slogan:
-
-**LEARN • GROW • SUCCEED**
-
----
-
-# 13. About Us Page
-
-File:
-
-
-pages/about.html
-
-
-The About Us page provides information about the organisation.
-
-The page includes:
-
-* Organisation background.
-* Organisation story.
-* Mission.
-* Vision.
-* Core values.
-* Information about tutors.
-* Commitment to learners.
-* Organisation image/logo.
-
-The fictional organisation was established in 2022 in Gqeberha, Eastern Cape.
-
----
-
-# 14. Services Page
-
-File:
-
-
-pages/services.html
-
-
-The Services page explains the academic services offered by the tutoring centre.
-
-The services include:
-
-* Mathematics.
-* Physical Sciences.
-* Life Sciences.
-* Online Tutoring.
-
-The page uses images to visually represent selected subjects and services.
-
----
-
-# 15. Enquiry Page
-
-File:
-
-pages/enquiry.html
-
-The Enquiry page contains an enquiry form.
-
-The form allows users to provide information such as:
-
-* First name.
-* Surname.
-* Email address.
-* Telephone number.
-* Grade.
-* Subject.
-* Preferred tutoring method.
-* Message.
-
-The enquiry form is designed to collect information that can assist the tutoring centre in responding to learner or parent enquiries.
-
----
-
-# 16. Contact Page
-
-File:
-
-pages/contact.html
-
-
-The Contact page provides ways for users to communicate with the organisation.
-
-The page includes:
-
-* Contact information.
-* Telephone information.
-* Contact form.
-* Social-media platforms.
-* Location information.
-* Map.
-
-The sample contact number used in the project is:
-
-**041 555 0123**
-
----
-
-# 17. Contact Form
-
-The Contact page includes a form that allows visitors to send a message.
-
-The form can contain fields such as:
-
-* Name.
-* Email address.
-* Telephone number.
-* Subject.
-* Message.
-* Submit button.
-
-The form provides a structured way for visitors to communicate with the organisation.
-
----
-
-# 18. Map
-
-A map has been included on the Contact page to indicate the general location of the fictional tutoring centre.
-
-The location represented by the website is:
-
-**Gqeberha, Eastern Cape, South Africa**
-
-The map is included to improve the usability of the Contact page and help users understand the organisation's general location.
-
----
-
-# 19. Social Media
-
-The Contact page includes social-media platforms planned for the organisation.
-
-These include:
-
-* Facebook.
-* Instagram.
-* WhatsApp Business.
-
-Because Asa's Future Tutoring Centre is a fictional organisation, these social-media platforms are included as project content and do not represent real organisation profiles.
-
-Social-media logos are used to make the links easier for users to recognise.
-
----
-
-# 20. Images and Media
-
-Images are used throughout the website to improve the visual presentation of the content.
-
-The project includes images representing:
-
-* Mathematics.
-* Physical Sciences.
-* Life Sciences.
-* Online Tutoring.
-* Tutors
-* Organisation logo.
-* Social-media platforms.
-
-Images are stored in the:
-
-assets/
-
-
-folder.
-
-Example image files include:
-
-
-mathematics.jpg
-physical-science.jpg
-life-science.jpg
-online-tutoring.jpg
-asa-future-tutoring-logo.png
-
-
----
-
-# 21. CSS Styling
-
-CSS3 was used to style the website and improve its visual presentation.
-
-The stylesheet is located in:
-
-
-css/style.css
-
-
-CSS was used for:
-
-* Page layout.
-* Colours.
-* Typography.
-* Spacing.
-* Navigation.
-* Buttons.
-* Images.
-* Forms.
-* Cards.
-* Sections.
-* Headers.
-* Footers.
-* Responsive design.
-* Background images.
-* Hover effects.
-
-The stylesheet contains comments explaining the purpose of important sections of the CSS code.
-
----
-
-# 22. Responsive Web Design
-
-The website was designed to work across different screen sizes.
-
-Responsive design helps the website adapt to:
-
-* Desktop computers.
-* Laptops.
-* Tablets.
-* Mobile phones.
-
-CSS media queries are used where necessary to change the layout for smaller screens.
-
-Responsive design improves usability because users do not need to use a desktop computer to access the website.
-
----
-
-# 23. Navigation
-
-A consistent navigation menu is used throughout the website.
-
-The main navigation options are:
-
-
-Home
-About Us
-Services
-Enquiry
-Contact
-
-
-Navigation links allow users to move between the different pages.
-
-The homepage is located at:
-
-
-/index.html
-
-
-The other pages are located inside:
-
-
-/pages/
-
-
----
-
-# 24. Accessibility
-
-Accessibility was considered during the development of the website.
-
-Accessibility features include:
-
-* Alternative text for images.
-* Clear headings.
-* Descriptive navigation links.
-* Labels for form fields.
-* Readable text.
-* Logical page structure.
-* Consistent navigation.
-* Appropriate contrast between text and backgrounds.
-
-Alternative text is added to images using the `alt` attribute.
-
-For example:
-
-
-<img src="assets/mathematics.jpg" alt="Mathematics tutoring">
-
-
-This allows users who rely on assistive technologies to understand the purpose of the image.
-
----
-
-# 25. Forms
-
-The website contains forms on the Enquiry and Contact pages.
-
-Forms use appropriate input types where applicable.
-
-Examples include:
-
-
-<input type="text">
-<input type="email">
-<input type="tel">
-<select>
-<textarea>
-<button>
-
-
-Form labels are included to clearly identify the information that users are expected to enter.
-
----
-
-# 26. Part 3 – Testing and Finalisation
-
-Part 3 focused on testing, correcting and finalising the website.
-
-Testing was performed to identify problems with:
-
-* Navigation.
-* Page links.
-* Images.
-* Forms.
-* CSS.
-* Folder paths.
-* File names.
-* Page structure.
-* Responsive layout.
-* GitHub Pages deployment.
-
----
-
-# 27. Website Testing
-
-The following areas were tested:
-
-| Test Area         | Purpose                                       |
-| ----------------- | --------------------------------------------- |
-| Navigation        | Check that links open the correct pages       |
-| Homepage          | Check that `index.html` loads correctly       |
-| About Page        | Check content and images                      |
-| Services Page     | Check service information and images          |
-| Enquiry Page      | Check form fields                             |
-| Contact Page      | Check contact information and form            |
-| Images            | Check that images load correctly              |
-| CSS               | Check that styling is applied                 |
-| Responsive Layout | Check different screen sizes                  |
-| Forms             | Check form controls and labels                |
-| GitHub Pages      | Check that the online website loads correctly |
-
----
-
-# 28. Link Testing
-
-All navigation links were checked to ensure that they point to the correct files.
-
-Because the homepage is stored in the root directory and the other pages are stored in the `pages` directory, links need to use the correct relative paths.
+Because the homepage is located in the root directory and the other pages are located inside the `pages` folder, relative paths must be used correctly.
 
 For example, from the homepage:
 
-
+```html
 <a href="pages/about.html">About Us</a>
+```
 
+From a page inside the `pages` folder, the link back to the homepage is:
 
-From a page inside the `pages` folder, a link back to the homepage uses:
-
-
+```html
 <a href="../index.html">Home</a>
+```
 
+The `../` moves one level up from the `pages` folder to the root directory.
 
-This prevents errors such as:
+This structure prevents incorrect paths such as:
 
-
+```text
 Cannot GET /pages/index.html
-
+```
 
 ---
 
-# 29. Image Path Testing
+## 9. Images and Assets
 
-Image paths were checked to ensure that images are stored in the correct folder.
+Images used by the website are stored inside the `assets` folder.
 
-The project uses:
+Examples include:
 
+* `asa-future-tutoring-logo.png`
+* `mathematics.jpg`
+* `life-science.jpg`
+* `online-tutoring.jpg`
 
-assets/
+From the homepage, an image can be referenced using:
 
-
-for images.
-
-From the homepage:
-
-
+```html
 <img src="assets/asa-future-tutoring-logo.png" alt="Asa's Future Tutoring Centre logo">
+```
 
-From a page inside the `pages` folder:
+From a page inside the `pages` folder, the correct path is:
 
-
+```html
 <img src="../assets/asa-future-tutoring-logo.png" alt="Asa's Future Tutoring Centre logo">
+```
 
-
-Using the correct relative path prevents images from displaying as broken images.
-
----
-
-# 30. File and Folder Naming
-
-The website uses lowercase folder names to reduce path and case-sensitivity problems.
-
-The main folders are:
-
-
-pages
-assets
-css
-
-
-The project avoids inconsistent folder names such as:
-
-
-Pages
-Assets
-CSS
-
-
-because GitHub Pages and web servers can treat uppercase and lowercase paths as different locations.
+Using the correct relative path ensures that images are loaded correctly.
 
 ---
 
-# 31. Git and GitHub
+## 10. Forms and Accessibility
 
-Git and GitHub were used to manage the project source code.
+Forms are included on the Enquiry and Contact pages.
 
-Git was used for:
+Form labels are included to clearly identify the information that users are expected to enter.
 
-* Tracking changes.
-* Creating commits.
-* Maintaining project versions.
-* Recording development progress.
+For example:
 
-GitHub was used for:
+```html
+<label for="name">Full Name:</label>
+<input type="text" id="name" name="name">
+```
 
-* Hosting the repository.
-* Storing the project online.
-* Managing the project files.
-* Publishing the website through GitHub Pages.
+The `for` attribute of the label corresponds to the `id` of the input field.
 
-Repository:
+This improves usability and accessibility because users can clearly identify what information should be entered into each field.
 
+Other form controls may include:
 
-Asa-s_Future_Tutoring_Centre
-
-
-GitHub account:
-
-
-Asamkelisiwe-Madikane
-
+* Text fields.
+* Email fields.
+* Telephone fields.
+* Selection controls.
+* Text areas.
+* Submit buttons.
 
 ---
 
-# 32. GitHub Pages Deployment
+# WEBSITE DESIGN
 
-The website was prepared for deployment using GitHub Pages.
-
-The homepage file must be located in the root directory:
-
-
-index.html
-
-
-The other pages are stored inside:
-
-
-pages/
-
-
-The GitHub Pages website is:
-
-
-https://asamkelisiwe-madikane.github.io/
-
-
-GitHub Pages uses `index.html` as the default homepage when the site root is opened.
-
----
-
-# 33. Version Control and Commits
-
-Git commits were used throughout development to keep track of changes.
-
-Examples of changes that can be recorded through commits include:
-
-1. Created initial website structure.
-2. Added homepage.
-3. Added About Us page.
-4. Added Services page.
-5. Added Enquiry page.
-6. Added Contact page.
-7. Added images and assets.
-8. Added CSS styling.
-9. Added responsive design.
-10. Corrected navigation paths.
-11. Corrected image paths.
-12. Updated website content.
-13. Prepared website for GitHub Pages.
-
-Using commits makes it possible to track the development history of the website.
-
----
-
-# 34. GitHub Repository
-
-The project repository contains the website source files and supporting documentation.
-
-The repository contains:
-
-
-index.html
-pages/
-assets/
-css/
-README.md
-
-
-The repository is intended to remain public so that the website can be accessed and assessed.
-
----
-
-# 35. Website Design Principles
+## 11. Website Design Principles
 
 The website was designed using several basic web-design principles.
 
-## Consistency
+### Consistency
 
-The navigation structure and general design are kept consistent across pages.
+The navigation structure and general design are kept consistent across the pages.
 
-## Simplicity
+### Simplicity
 
-Information is presented in a straightforward manner so users can easily understand the content.
+Information is presented in a straightforward manner so that users can easily understand the content.
 
-## Accessibility
+### Accessibility
 
 Content, images and forms are designed to be usable by a broad range of visitors.
 
-## Visual Hierarchy
+### Visual Hierarchy
 
 Headings, sections and images help users identify important information.
 
-## Usability
+### Usability
 
-Navigation links and forms are arranged so users can find and submit information easily.
+Navigation links and forms are arranged so that users can find information and submit information easily.
 
 ---
 
-# 36. Website Content
+## 12. Website Content
 
-The website provides information about the following areas:
+The website provides information about the following areas.
 
 ### Academic Subjects
 
 * Mathematics
 * Physical Sciences
 * Life Sciences
-
+* English
+* Accounting
+* Business Studies
+* CAT
 
 ### Tutoring Services
 
@@ -870,93 +281,142 @@ The website provides information about the following areas:
 
 ---
 
-# 37. Online Tutoring
+## 13. Online Tutoring
 
 Online tutoring was included as one of the services provided by Asa's Future Tutoring Centre.
 
 Online tutoring allows learners to receive academic support without necessarily attending a physical tutoring location.
 
-The website includes an online-tutoring image and information about the service.
+The website includes information and an image representing the online-tutoring service.
 
 ---
 
-# 38. Project Challenges and Solutions
+# PROJECT INFORMATION
 
-During development, several common website-development issues were considered.
+## 14. Git and GitHub
 
-| Challenge                       | Solution                                          |
-| ------------------------------- | ------------------------------------------------- |
-| Homepage not loading            | Ensure `index.html` is in the repository root     |
-| Page links not working          | Correct relative file paths                       |
-| Images not displaying           | Correct `assets/` paths and filenames             |
-| CSS not loading                 | Correct stylesheet path                           |
-| Different folder capitalisation | Use consistent lowercase folder names             |
-| GitHub Pages 404 error          | Check repository structure and Pages settings     |
-| Broken navigation               | Test links from every page                        |
-| Mobile layout problems          | Use responsive CSS                                |
-| Incorrect image paths           | Use correct relative paths based on page location |
+Git and GitHub were used to manage the project source code.
 
----
+### Git was used for:
 
-# 39. Final Website Structure
+* Tracking changes.
+* Creating commits.
+* Maintaining project versions.
+* Recording development progress.
 
-The final website follows this structure:
+### GitHub was used for:
 
+* Hosting the repository.
+* Storing the project online.
+* Managing project files.
+* Publishing the website through GitHub Pages.
 
-                    ASA'S FUTURE
-                  TUTORING CENTRE
-                         |
-        -----------------------------------------
-        |          |          |         |       |
-      HOME       ABOUT      SERVICES  ENQUIRY  CONTACT
-                   |           |
-                   |     -----------------------
-                   |     |       |       |      |
-                   |   Maths  Physical  Life  Online
-                   |          Sciences Sciences Tutoring
-                   |
-              Organisation
-              Information
-              Mission
-              Vision
-              Values
+**Repository:** `Asa-s_Future_Tutoring_Centre`
 
+**GitHub Account:** `Asamkelisiwe-Madikane`
 
 ---
 
-# 40. Technologies Used
+## 15. GitHub Pages Deployment
 
-The project uses the following technologies:
+The website was prepared for deployment using GitHub Pages.
 
-| Technology   | Purpose                       |
-| ------------ | ----------------------------- |
-| HTML5        | Website structure and content |
-| CSS          | Website styling and layout    |
-| Git          | Version control               |
-| GitHub       | Repository hosting            |
-| GitHub Pages | Website deployment            |
-| Web Browser  | Website testing               |
+The homepage file is located in the root directory:
 
----
+```text
+index.html
+```
 
-# 41. Browser Testing
+The other website pages are located inside:
 
-The website was tested using a modern web browser.
+```text
+pages/
+```
 
-Testing included:
+The GitHub Pages website is:
 
-* Opening the homepage.
-* Opening each navigation page.
-* Checking images.
-* Checking forms.
-* Checking CSS styling.
-* Checking links.
-* Checking the website at different screen sizes.
-* Checking the published GitHub Pages website.
+[Asa's Future Tutoring Centre – GitHub Pages](https://asamkelisiwe-madikane.github.io/?utm_source=chatgpt.com)
+
+GitHub Pages uses `index.html` as the default homepage when the website root is opened.
 
 ---
 
-# 42. Project Outcome
+## 16. Version Control and Commits
+
+Git commits were used throughout development to keep track of changes.
+
+Examples of changes that can be recorded through commits include:
+
+* Created initial website structure.
+* Added homepage.
+* Added About Us page.
+* Added Services page.
+* Added Enquiry page.
+* Added Contact page.
+* Added images and assets.
+* Added CSS styling.
+* Added responsive design.
+* Corrected navigation paths.
+* Corrected image paths.
+* Updated website content.
+* Prepared website for GitHub Pages.
+
+Using commits makes it possible to track the development history of the website and identify changes made during development.
+
+---
+
+## 17. GitHub Repository
+
+The project repository contains the website source files and supporting documentation.
+
+The repository contains:
+
+```text
+index.html
+pages/
+assets/
+css/
+README.md
+```
+
+The repository is intended to remain public so that the website can be accessed and assessed.
+
+---
+
+# PROJECT CHALLENGES AND SOLUTIONS
+
+## 18. Project Challenges and Solutions
+
+During development, several common website-development issues were identified and addressed.
+
+| Challenge                       | Solution                                                 |
+| ------------------------------- | -------------------------------------------------------- |
+| Homepage not loading            | Ensure `index.html` is located in the repository root    |
+| Page links not working          | Use the correct relative file paths                      |
+| Images not displaying           | Check `assets/` paths and filenames                      |
+| CSS not loading                 | Check the stylesheet path                                |
+| Different folder capitalisation | Use consistent lowercase folder names                    |
+| GitHub Pages 404 error          | Check repository structure and GitHub Pages settings     |
+| Broken navigation               | Test links from every page                               |
+| Mobile layout problems          | Use responsive CSS                                       |
+| Incorrect image paths           | Use the correct relative path based on the page location |
+
+---
+
+## 19. Technologies Used
+
+| Technology   | Purpose                                       |
+| ------------ | --------------------------------------------- |
+| HTML5        | Website structure and content                 |
+| CSS3         | Website styling, layout and responsive design |
+| Git          | Version control                               |
+| GitHub       | Repository hosting                            |
+| GitHub Pages | Website deployment                            |
+| Web Browser  | Website testing                               |
+
+---
+
+## 20. Project Outcome
 
 The completed project provides a structured and user-friendly website for the fictional Asa's Future Tutoring Centre.
 
@@ -974,65 +434,72 @@ The website demonstrates the practical application of:
 * GitHub.
 * GitHub Pages.
 
-The final website provides learners and parents with information about the organisation, tutoring services, subjects, enquiries and contact options.
+The final website provides learners and parents with information about the organisation, tutoring services, academic subjects, online tutoring, enquiries and contact options.
 
 ---
 
-# 43. References
+# REFERENCES
+
+## 21. References
 
 The following resources were consulted for general web-development information and technical guidance.
 
 ### HTML
 
 Mozilla Developer Network (MDN). 2026. *HTML: HyperText Markup Language*. Available at:
-https://developer.mozilla.org/en-US/docs/Web/HTML
+[MDN HTML Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML?utm_source=chatgpt.com)
 Accessed: 15 September 2026.
 
 ### CSS
 
 Mozilla Developer Network (MDN). 2026. *CSS: Cascading Style Sheets*. Available at:
-https://developer.mozilla.org/en-US/docs/Web/CSS
+[MDN CSS Documentation](https://developer.mozilla.org/en-US/docs/Web/CSS?utm_source=chatgpt.com)
 Accessed: 15 September 2026.
 
-
+### Web Accessibility
 
 World Wide Web Consortium (W3C). 2026. *Web Accessibility Initiative*. Available at:
-https://www.w3.org/WAI/
+[W3C Web Accessibility Initiative](https://www.w3.org/WAI/?utm_source=chatgpt.com)
 Accessed: 15 September 2026.
 
 ### GitHub
 
 GitHub. 2026. *GitHub Documentation*. Available at:
-https://docs.github.com/
+[GitHub Documentation](https://docs.github.com/?utm_source=chatgpt.com)
 Accessed: 15 September 2026.
 
 ### GitHub Pages
 
 GitHub. 2026. *What is GitHub Pages?* Available at:
-https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages
+[GitHub Pages Documentation](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages?utm_source=chatgpt.com)
 Accessed: 15 September 2026.
 
 ### HTML Validation
 
 World Wide Web Consortium (W3C). 2026. *Markup Validation Service*. Available at:
-https://validator.w3.org/
+[W3C Markup Validation Service](https://validator.w3.org/?utm_source=chatgpt.com)
 Accessed: 15 September 2026.
 
 ### CSS Validation
 
 World Wide Web Consortium (W3C). 2026. *CSS Validation Service*. Available at:
-https://jigsaw.w3.org/css-validator/
+[W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/?utm_source=chatgpt.com)
 Accessed: 15 September 2026.
 
+---
 
+# AUTHOR INFORMATION
 
-# 44. Author
+## 22. Author
 
 **Student:** Asamkelisiwe Madikane
+
 **Student Number:** ST10519703
+
 **Project:** Asa's Future Tutoring Centre
+
 **Year:** 2026
 
-**LEARN • GROW • SUCCEED**
+**Slogan:** LEARN • GROW • SUCCEED
 
-**Supporting Learners to Achieve Academic Success**
+**Tagline:** Supporting Learners to Achieve Academic Success
