@@ -446,11 +446,6 @@ The cards help users quickly identify:
 * Mathematics.
 * Physical Sciences.
 * Life Sciences.
-* English.
-* Accounting.
-* Business Studies.
-* CAT.
-* Examination preparation.
 * Online tutoring.
 
 CSS controls the layout, spacing and appearance of these sections.
