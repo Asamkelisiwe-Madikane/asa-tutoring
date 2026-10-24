@@ -1,0 +1,21 @@
+Asa's Future Tutoring Centre — Part 3 update
+
+This archive keeps the home-background version of the website and adds:
+- js/site.js for JavaScript form validation, dynamic service filtering and image lightbox
+- accessible FAQ accordions on the About page
+- SEO metadata, robots.txt and sitemap.xml
+- Part 3 implementation details, testing checklist, changelog and references in README.md
+
+Important: both forms use mailto. After validation, a visitor's email application opens and the visitor must press Send. A static GitHub Pages site cannot send email or store form submissions without a configured form backend/service.
+
+Before publishing, confirm that the public GitHub Pages URL matches the base URL in sitemap.xml and robots.txt.
+
+Additional requested Part 3 features: 350-character maxlength plus 350-word validation and live counters; trimmed field values; emailPattern regular expression; explicit enquiry types; descriptive SEO titles/meta keywords and descriptions; voice search where browser-supported; responsive voice button; visible validation errors and success status; complete user-entered fields and message included in the prepared mailto email.
+
+
+Additional requested features (24 October 2026):
+- Homepage date is generated automatically using the Africa/Johannesburg timezone and updates on every visit.
+- Live countdown displays the time remaining until midnight South African time and refreshes every second.
+- Enquiry type dropdown includes enrolment, fees, timetable, online tutoring, subject support, learner progress, parent/guardian consultation and other.
+- Homepage includes a responsive YouTube mathematics lesson example. The video is third-party educational content and is clearly labelled as an example, not an actual recording of Asa's classes.
+- The homepage YouTube section uses a lightweight thumbnail and a clear Play button. The full embedded player loads only after a visitor clicks Play, helping the rest of the website load faster. A direct YouTube link remains available as a fallback.
