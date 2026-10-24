@@ -10,27 +10,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Describe the purpose of the enquiry page. -->
     <meta name="description" content="Make an enquiry about tutoring services at Asa's Future Tutoring Centre.">
+    <meta name="keywords" content="Asa Future Tutoring Centre, tutoring Gqeberha, Mathematics tutor, Physical Sciences, Life Sciences, online tutoring, Grade 8 to 12">
+    <meta name="robots" content="index, follow">
     <!-- Set the browser tab title. -->
-    <title>Enquiry | Asa's Future Tutoring Centre</title>
+    <title>Request Tutoring Support for Grades 8–12 | Asa's Future Tutoring Centre</title>
     <!-- Link to the shared external stylesheet. -->
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style.css?v=3">
     <!-- End of the page metadata and stylesheet section. -->
 </head>
 <!-- The body contains all visible content displayed to website visitors. -->
 <body>
     <!-- The header provides consistent branding and navigation. -->
     <header class="site-header">
+        <!-- The header keeps the logo, organisation name and slogan together. -->
         <div class="container header-inner">
             <div class="branding">
-                <!-- The logo is positioned in the top corner of the header and links back to Home. -->
+                <!-- The logo links back to the Home page. -->
                 <a class="corner-logo-link" href="../index.html" aria-label="Asa's Future Tutoring Centre Home">
                     <img class="site-logo" src="../assets/assets/asa-future-tutoring-logo.png" alt="Asa's Future Tutoring Centre logo">
                 </a>
-                <h1>Asa's Future Tutoring Centre</h1>
-                <p>Supporting Learners to Achieve Academic Success</p>
+                <!-- The organisation name is displayed directly next to the logo. -->
+                <div class="branding-text">
+                    <h1>Asa's Future Tutoring Centre</h1>
+                    <!-- The slogan/motto is displayed underneath the organisation name. -->
+                    <p>Supporting Learners to Achieve Academic Success</p>
+                </div>
             </div>
         </div>
-        <!-- The navigation gives access to every main page. -->
         <nav class="site-nav" aria-label="Main navigation">
             <!-- The hidden checkbox controls the mobile hamburger menu without requiring JavaScript. -->
             <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Open or close navigation menu">
@@ -68,7 +74,7 @@
         <section class="section">
             <div class="container">
                 <!-- The form collects information entered by the visitor and provides a submit action. -->
-                <form action="#" method="post">
+                <form class="js-email-form" data-form-type="enquiry" action="mailto:info@asafuturetutoring.co.za" method="post" enctype="text/plain" novalidate>
                     <!-- Personal details are grouped together in this fieldset. -->
                     <fieldset>
                         <legend>Learner Information</legend>
@@ -97,6 +103,20 @@
                     <!-- Tutoring preferences are grouped in a second fieldset. -->
                     <fieldset>
                         <legend>Tutoring Requirements</legend>
+                        <div class="form-group">
+                            <label for="enquiry-type">Enquiry Type:</label>
+                            <select id="enquiry-type" name="enquiryType" required>
+                                <option value="">Select enquiry type</option>
+                                <option value="New enrolment">New learner enrolment</option>
+                                <option value="Tutoring fees">Tutoring fees and payment</option>
+                                <option value="Timetable">Lesson timetable and availability</option>
+                                <option value="Online lessons">Online tutoring information</option>
+                                <option value="Subject support">Question about a subject or lesson</option>
+                                <option value="Learner progress">Learner progress or assessment support</option>
+                                <option value="Parent consultation">Parent/guardian consultation</option>
+                                <option value="Other">Other question</option>
+                            </select>
+                        </div>
                         <div class="form-group">
                             <!-- The grade select allows the learner to choose their school grade. -->
                             <label for="grade">Grade:</label>
@@ -133,11 +153,15 @@
                         <div class="form-group">
                             <!-- The message area allows the learner to explain their needs. -->
                             <label for="message">Message:</label>
-                            <textarea id="message" name="message" rows="7" required></textarea>
+                            <textarea id="message" name="message" rows="7" maxlength="350" aria-describedby="message-limit message-count" required></textarea>
+                            <small id="message-limit">Please keep your message within 350 words. The field also has a 350-character limit.</small>
+                            <small id="message-count" aria-live="polite">0/350 characters · 0/350 words</small>
                         </div>
                     </fieldset>
 
-                    <!-- The submit button sends the completed form to the form action. -->
+                    <!-- JavaScript reports validation errors and explains the email hand-off. -->
+                    <p class="form-status" aria-live="polite" role="status"></p>
+                    <!-- Submitting opens the visitor's email application with the enquiry details prepared. -->
                     <button class="button" type="submit">Submit Enquiry</button>
                 </form>
             </div>
@@ -195,7 +219,8 @@
         <p class="copyright">&copy; 2026 Asa's Future Tutoring Centre. All rights reserved.</p>
     </footer>
     <!-- End of all visible webpage content. -->
+    <!-- Part 3 JavaScript adds form validation, filtering, and image lightbox functionality. -->
+    <script src="../js/site.js" defer></script>
 </body>
 <!-- End of the complete HTML document. -->
 </html>
-
