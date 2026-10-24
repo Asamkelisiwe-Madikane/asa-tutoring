@@ -4,20 +4,12 @@
    Comments explain the purpose of the main styling sections.
    ========================================================== */
 
-
-/* ==========================================================
-   GENERAL WEBSITE STYLING
-   ========================================================== */
-
-/* Use a predictable box model so padding and borders are
-   included in element widths. */
+/* Use a predictable box model so padding and borders are included in element widths. */
 * {
     box-sizing: border-box;
 }
 
-
-/* Remove the browser's default body margin and set the
-   main typography. */
+/* Remove the browser's default body margin and set the main typography. */
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -26,60 +18,49 @@ body {
     background: #f7fbff;
 }
 
-
-/* Keep images responsive so they never overflow their
-   containers. */
+/* Keep images responsive so they never overflow their containers. */
 img {
     max-width: 100%;
     height: auto;
 }
 
-
-/* Create a reusable centred content area for all major
-   page sections. */
+/* Create a reusable centered content area for all major page sections. */
 .container {
     width: min(92%, 1150px);
     margin: 0 auto;
 }
 
-
-/* ==========================================================
-   HEADER
-   ========================================================== */
-
-/* Style the site header and make the logo and centre name
-   easy to recognise. */
+/* Style the site header and keep the logo, centre name and slogan together. */
 .site-header {
     background: #ffffff;
     border-bottom: 4px solid #1f6fb2;
 }
 
-
-/* Arrange the header branding using Flexbox. */
+/* Place the logo and organisation text in one horizontal branding row. */
 .header-inner {
-    position: relative;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 2rem;
-    min-height: 105px;
-    padding: 1rem 0 1rem 105px;
+    min-height: 120px;
+    padding: 1rem 0;
 }
 
+/* Keep the logo and text together across the header. */
+.branding {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
 
-/* Position the website logo neatly in the top-left corner
-   of the header. */
+/* The logo is a clickable link back to Home. */
 .corner-logo-link {
-    position: absolute;
-    top: 8px;
-    left: 0;
     display: block;
+    flex: 0 0 auto;
     line-height: 0;
     border-radius: 0.5rem;
 }
 
-
-/* Make the top-left logo slightly bigger. */
+/* Make the logo clearly visible beside the organisation name. */
 .site-logo {
     display: block;
     width: 90px;
@@ -87,64 +68,59 @@ img {
     object-fit: contain;
 }
 
-
 /* Show a clear keyboard focus state around the logo link. */
 .corner-logo-link:focus {
     outline: 3px solid #2f8bd3;
     outline-offset: 3px;
 }
 
-
-/* Remove excessive default heading margins in the branding
-   area. */
-.branding h1,
-.branding p {
-    margin: 0;
+/* Stack the organisation name and slogan beside the logo. */
+.branding-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
-
 
 /* Make the organisation name prominent. */
-.branding h1 {
+.branding-text h1 {
+    margin: 0;
+    color: #123f6d;
     font-size: clamp(1.5rem, 3vw, 2.2rem);
+    line-height: 1.2;
 }
 
-
-/* Style the organisation tagline. */
-.branding p {
+/* Place the slogan directly underneath the organisation name. */
+.branding-text p {
+    margin: 0.35rem 0 0;
     color: #1f6fb2;
     font-weight: 700;
+    font-size: clamp(0.9rem, 1.8vw, 1.05rem);
 }
-
 
 /* ==========================================================
    RESPONSIVE HAMBURGER NAVIGATION
-   The checkbox + label approach keeps the mobile menu
-   usable without JavaScript.
+   The checkbox + label approach keeps the mobile menu usable
+   without JavaScript while the full navigation remains visible
+   on laptops and larger screens.
    ========================================================== */
 
-/* Hide the menu control on larger screens because the full
-   navigation is already visible. */
+/* Hide the menu control on larger screens because the full navigation is already visible. */
 .menu-toggle,
 .hamburger {
     display: none;
 }
 
-
-/* Keep the navigation container ready for the responsive
-   menu. */
+/* Keep the navigation container ready for the responsive menu. */
 .nav-container {
     position: relative;
 }
-
 
 /* Give the navigation a strong visual identity. */
 .site-nav {
     background: #123f6d;
 }
 
-
-/* Use Flexbox to display navigation links horizontally on
-   larger screens. */
+/* Use Flexbox to display navigation links horizontally on larger screens. */
 .site-nav ul {
     display: flex;
     justify-content: center;
@@ -154,7 +130,6 @@ img {
     margin: 0;
     padding: 0.5rem 0;
 }
-
 
 /* Style each navigation link as a clear clickable control. */
 .site-nav a {
@@ -166,86 +141,53 @@ img {
     border-radius: 0.35rem;
 }
 
-
-/* Provide hover and keyboard focus feedback for
-   accessibility. */
+/* Provide hover and keyboard focus feedback for accessibility. */
 .site-nav a:hover,
 .site-nav a:focus {
     background: #2f8bd3;
     outline: none;
 }
 
-
 /* Highlight the current page in the navigation. */
 .site-nav a[aria-current="page"] {
     background: #2f8bd3;
 }
 
-
-/* ==========================================================
-   HOME PAGE HERO
-   The Online Tutoring image is used as the background
-   picture for the Home page only.
-   ========================================================== */
-
-/* Create a spacious hero area for important introductory
-   content. */
+/* Create a spacious hero area for important introductory content. */
 .hero {
-    padding: 4rem 0;
-
-    /*
-       The first background layer creates a transparent
-       blue overlay.
-
-       The second background layer is the Online Tutoring
-       image.
-
-       Because style.css is inside the css folder and the
-       image is inside assets/assets, ../ moves out of css
-       and then enters the assets/assets folder.
-    */
+    position: relative;
+    padding: 5rem 0;
     background-image:
-        linear-gradient(
-            rgba(18, 63, 109, 0.70),
-            rgba(18, 63, 109, 0.70)
-        ),
+        linear-gradient(rgba(18, 63, 109, 0.70), rgba(18, 63, 109, 0.70)),
         url("../assets/assets/online-tutoring.jpg");
-
-    /* Make the image cover the complete hero area. */
     background-size: cover;
-
-    /* Keep the main part of the image centred. */
     background-position: center;
-
-    /* Prevent the background image from repeating. */
     background-repeat: no-repeat;
-
-    /* Makes the hero text readable over the image. */
     color: #ffffff;
 }
 
+/* Keep hero text readable over the photographic background. */
+.hero h2,
+.hero p {
+    color: #ffffff;
+}
 
-/* Make hero headings responsive without needing many
-   media queries. */
+.hero .slogan {
+    color: #dff2ff;
+}
+
+/* Make hero headings responsive without needing many media queries. */
 .hero h2 {
     font-size: clamp(2rem, 5vw, 3.5rem);
     margin: 0 0 0.75rem;
 }
 
-
 /* Style the slogan used in the hero section. */
 .slogan {
     font-weight: 800;
     letter-spacing: 0.12em;
-
-    /* White text improves readability over the image. */
-    color: #ffffff;
+    color: #1f6fb2;
 }
-
-
-/* ==========================================================
-   BUTTONS
-   ========================================================== */
 
 /* Reusable button styling for calls to action. */
 .button {
@@ -259,7 +201,6 @@ img {
     margin: 0.4rem 0.4rem 0.4rem 0;
 }
 
-
 /* Give buttons a visible hover/focus state. */
 .button:hover,
 .button:focus {
@@ -267,27 +208,16 @@ img {
     outline: 3px solid #9ed4f5;
 }
 
-
-/* ==========================================================
-   GENERAL CONTENT SECTIONS
-   ========================================================== */
-
 /* Add consistent vertical spacing to main content sections. */
 .section {
     padding: 3rem 0;
 }
-
 
 /* Use a subtle heading style to separate page sections. */
 .section-heading {
     margin-top: 0;
     color: #123f6d;
 }
-
-
-/* ==========================================================
-   CARD LAYOUTS
-   ========================================================== */
 
 /* Create responsive card grids using CSS Grid. */
 .card-grid {
@@ -296,18 +226,14 @@ img {
     gap: 1.5rem;
 }
 
-
-/* Make a four-column tutor grid where the screen is wide
-   enough. */
+/* Make a four-column tutor grid where the screen is wide enough. */
 .tutor-grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 1.25rem;
 }
 
-
-/* Give service and tutor cards a consistent visual
-   treatment. */
+/* Give service and tutor cards a consistent visual treatment. */
 .card,
 .tutor-card,
 .info-card {
@@ -318,9 +244,7 @@ img {
     box-shadow: 0 4px 12px rgba(18, 63, 109, 0.08);
 }
 
-
-/* Keep tutor portraits the same visual height and crop them
-   neatly. */
+/* Keep tutor portraits the same visual height and crop them neatly. */
 .tutor-card img {
     width: 100%;
     height: 220px;
@@ -328,13 +252,11 @@ img {
     border-radius: 0.6rem;
 }
 
-
 /* Style the tutor subject label. */
 .tutor-subject {
     color: #1f6fb2;
     font-weight: 800;
 }
-
 
 /* Add a soft highlight to the tutor quote. */
 .tutor-quote {
@@ -344,41 +266,24 @@ img {
     font-style: italic;
 }
 
-
 /* Keep figure captions readable and compact. */
 figcaption {
     margin-top: 0.5rem;
     font-weight: 700;
 }
 
-
-/* ==========================================================
-   LISTS
-   ========================================================== */
-
-/* Improve the appearance of lists used for values and
-   sitemap items. */
+/* Improve the appearance of lists used for values and sitemap items. */
 ul,
 ol {
     padding-left: 1.4rem;
 }
 
-
-/* ==========================================================
-   INFORMATION / CONTACT LAYOUT
-   ========================================================== */
-
-/* Use CSS Grid for contact and information layouts. */
+/* Use CSS Grid for the contact and information layouts. */
 .info-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1.5rem;
 }
-
-
-/* ==========================================================
-   FORMS
-   ========================================================== */
 
 /* Style forms so labels and fields are easy to read. */
 form {
@@ -388,7 +293,6 @@ form {
     border-radius: 0.8rem;
 }
 
-
 /* Give fieldsets a clear grouping boundary. */
 fieldset {
     border: 1px solid #cfe3f2;
@@ -397,7 +301,6 @@ fieldset {
     padding: 1rem;
 }
 
-
 /* Make the group title visually clear. */
 legend {
     padding: 0 0.5rem;
@@ -405,12 +308,10 @@ legend {
     color: #123f6d;
 }
 
-
 /* Stack labels and controls cleanly. */
 .form-group {
     margin-bottom: 1rem;
 }
-
 
 /* Keep labels visually connected to their form controls. */
 label {
@@ -418,7 +319,6 @@ label {
     margin-bottom: 0.3rem;
     font-weight: 700;
 }
-
 
 /* Style text fields, selections and text areas consistently. */
 input,
@@ -431,24 +331,16 @@ textarea {
     font: inherit;
 }
 
-
 /* Allow users to resize only text areas vertically. */
 textarea {
     resize: vertical;
 }
 
-
-/* Make the submit button consistent with the site's other
-   calls to action. */
+/* Make the submit button consistent with the site's other calls to action. */
 button {
     border: 0;
     cursor: pointer;
 }
-
-
-/* ==========================================================
-   MAP
-   ========================================================== */
 
 /* Ensure embedded maps do not exceed the content width. */
 .map-frame {
@@ -458,11 +350,6 @@ button {
     border-radius: 0.6rem;
 }
 
-
-/* ==========================================================
-   SOCIAL MEDIA
-   ========================================================== */
-
 /* Arrange social links neatly in a flexible row. */
 .social-links {
     display: flex;
@@ -470,7 +357,6 @@ button {
     gap: 1rem;
     align-items: center;
 }
-
 
 /* Keep social media logos compact. */
 .social-links img {
@@ -481,11 +367,6 @@ button {
     vertical-align: middle;
 }
 
-
-/* ==========================================================
-   CALL TO ACTION
-   ========================================================== */
-
 /* Highlight the tutor call-to-action strip. */
 .cta-strip {
     background: #e7f4ff;
@@ -494,10 +375,7 @@ button {
     text-align: center;
 }
 
-
-/* ==========================================================
-   FOOTER
-   ========================================================== */
+/* Style the site footer with a contrasting background. */
 
 /* Remove default list styling from footer navigation. */
 .site-footer ul {
@@ -506,17 +384,13 @@ button {
     padding: 0;
 }
 
-
-/* Style quick social links so each platform is easy to
-   identify and click. */
+/* Style quick social links so each platform is easy to identify and click. */
 .footer-social-links {
     display: flex;
     flex-direction: column;
     gap: 0.65rem;
 }
 
-
-/* Footer social media links. */
 .footer-social-links a {
     display: inline-flex;
     align-items: center;
@@ -526,8 +400,6 @@ button {
     font-weight: 700;
 }
 
-
-/* Footer social media logos. */
 .footer-social-links img {
     width: 36px;
     height: 36px;
@@ -535,8 +407,6 @@ button {
     border-radius: 50%;
 }
 
-
-/* Footer social link hover and focus state. */
 .footer-social-links a:hover,
 .footer-social-links a:focus {
     text-decoration: underline;
@@ -544,29 +414,23 @@ button {
     outline-offset: 3px;
 }
 
-
-/* Style the site footer with a contrasting background. */
 .site-footer {
     background: #123f6d;
     color: #ffffff;
     padding: 2.5rem 0;
 }
 
-
-/* Use a four-column footer grid for organisation,
-   navigation, contact and social links. */
+/* Use a four-column footer grid for organisation, navigation, contact and social links. */
 .footer-grid {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1fr;
     gap: 2rem;
 }
 
-
 /* Keep footer links readable against the dark background. */
 .site-footer a {
     color: #ffffff;
 }
-
 
 /* Make the copyright line visually distinct. */
 .copyright {
@@ -576,90 +440,61 @@ button {
     text-align: center;
 }
 
-
 /* ==========================================================
-   RESPONSIVE BREAKPOINT 1
-   TABLETS / SMALL LAPTOPS
+   RESPONSIVE BREAKPOINT 1: TABLETS / SMALL LAPTOPS
+   The multi-column grids collapse to fewer columns here.
    ========================================================== */
-
-/* The multi-column grids collapse to fewer columns here. */
 @media (max-width: 950px) {
-
-    /* Display two tutor cards per row. */
     .tutor-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-
-    /* Display two general cards per row. */
     .card-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-
-    /* Adjust the header for smaller screens. */
     .header-inner {
         align-items: flex-start;
         flex-direction: column;
     }
 
-
-    /* Reduce footer columns. */
     .footer-grid {
         grid-template-columns: 1fr 1fr;
     }
 }
 
-
 /* ==========================================================
-   RESPONSIVE BREAKPOINT 2
-   MOBILE DEVICES
+   RESPONSIVE BREAKPOINT 2: MOBILE DEVICES
+   The layout becomes one column and navigation becomes vertical.
    ========================================================== */
-
-/* The layout becomes one column and navigation becomes
-   vertical. */
 @media (max-width: 650px) {
-
-    /* Make the main container slightly wider on phones. */
     .container {
         width: min(94%, 1150px);
     }
 
-
-    /* Keep the larger logo visible and give the branding
-       room beside it. */
+    /* Keep the corner logo visible and give the branding room beside it on small screens. */
     .header-inner {
-        min-height: 115px;
-        padding-left: 100px;
+        min-height: 110px;
+        padding-left: 92px;
     }
 
-
-    /* Slightly reduce the logo on smaller devices. */
     .site-logo {
         width: 75px;
         height: 75px;
     }
 
-
-    /* Keep the logo in the top-left position. */
     .corner-logo-link {
         top: 8px;
     }
 
-
-    /* Stack navigation links vertically. */
     .site-nav ul {
         flex-direction: column;
     }
 
-
-    /* Centre mobile navigation links. */
     .site-nav a {
         text-align: center;
     }
 
-
-    /* Change all major grids to one column. */
     .tutor-grid,
     .card-grid,
     .info-grid,
@@ -667,27 +502,17 @@ button {
         grid-template-columns: 1fr;
     }
 
-
-    /* Reduce hero spacing on mobile. */
     .hero {
         padding: 2.5rem 0;
     }
 
-
-    /* Reduce section spacing on mobile. */
     .section {
         padding: 2rem 0;
     }
 }
 
-
-/* ==========================================================
-   MOBILE HAMBURGER NAVIGATION
-   Phones and narrow tablet screens use a hamburger menu.
-   ========================================================== */
-
+/* Mobile navigation breakpoint: phones and narrow tablet screens use a hamburger menu. */
 @media (max-width: 700px) {
-
     /* Show the hamburger button only on smaller screens. */
     .hamburger {
         display: flex;
@@ -704,9 +529,7 @@ button {
         background: #123f6d;
     }
 
-
-    /* Draw the three lines that visually identify the
-       hamburger button. */
+    /* Draw the three lines that visually identify the hamburger button. */
     .hamburger span {
         display: block;
         width: 100%;
@@ -715,16 +538,13 @@ button {
         border-radius: 2px;
     }
 
-
     /* Make the hamburger keyboard focus visible. */
     .hamburger:focus-within {
         outline: 3px solid #9ed4f5;
         outline-offset: 2px;
     }
 
-
-    /* Hide the navigation links until the visitor opens
-       the hamburger menu. */
+    /* Hide the navigation links until the visitor opens the hamburger menu. */
     .site-nav ul {
         display: none;
         flex-direction: column;
@@ -733,42 +553,147 @@ button {
         padding: 0.5rem 0 0.8rem;
     }
 
-
-    /* Show the navigation links when the hidden checkbox
-       is selected. */
+    /* Show the navigation links when the hidden checkbox is selected. */
     .menu-toggle:checked + .hamburger + .nav-container ul {
         display: flex;
     }
 
-
-    /* Give mobile navigation links comfortable touch
-       targets. */
+    /* Give mobile navigation links comfortable touch targets. */
     .site-nav a {
         width: 100%;
         text-align: center;
         padding: 0.8rem 1rem;
     }
 
-
-    /* Make the larger logo and text fit comfortably on
-       narrow screens. */
+    /* Make the logo, organisation name and slogan fit comfortably on narrow screens. */
     .header-inner {
         min-height: 105px;
-        padding-left: 92px;
+        padding: 0.75rem 0;
     }
 
+    .branding {
+        gap: 0.65rem;
+    }
 
-    /* Keep the logo visible on mobile. */
     .site-logo {
         width: 75px;
         height: 75px;
     }
 
+    .branding-text h1 {
+        font-size: 1.2rem;
+    }
 
-    /* Stack content grids on phones. */
+    .branding-text p {
+        font-size: 0.75rem;
+    }
+
+    /* Stack content grids so cards remain readable on phones. */
     .card-grid,
     .tutor-grid,
     .info-grid {
         grid-template-columns: 1fr;
     }
+}
+
+
+/* ================================================================
+   PART 3 ENHANCEMENTS: search, validation feedback, FAQ and lightbox
+   ================================================================ */
+[hidden] { display: none !important; }
+.service-search { max-width: 680px; margin: 0 auto 1.5rem; }
+.service-search small { display: block; margin-top: .35rem; }
+.form-status { margin: 1rem 0; padding: .75rem 1rem; border-radius: 6px; }
+.form-status:empty { display: none; }
+.form-status.is-error { color: #8b1010; background: #fff0f0; border: 1px solid #c83b3b; }
+.form-status.is-success { color: #14532d; background: #effaf2; border: 1px solid #48a868; }
+input[aria-invalid="true"], select[aria-invalid="true"], textarea[aria-invalid="true"] { border: 2px solid #b42318; outline-color: #b42318; }
+.faq-section { max-width: 100%; }
+.faq-item { margin: .75rem 0; padding: 1rem 1.1rem; border: 1px solid #d4dfeb; border-radius: 8px; background: #fff; }
+.faq-item summary { cursor: pointer; font-weight: 700; color: #17365d; }
+.faq-item p { margin-bottom: 0; padding-top: .65rem; }
+.image-lightbox { width: min(96vw, 1400px); max-width: 96vw; max-height: 96vh; padding: 1rem; border: 0; border-radius: 10px; background: #fff; box-shadow: 0 12px 45px #0008; overflow: auto; }
+.image-lightbox::backdrop { background: rgb(8 20 35 / 82%); }
+.image-lightbox img { display: block; max-width: 92vw; max-height: 86vh; width: auto; height: auto; margin: 1.5rem auto .5rem; object-fit: contain; }
+.image-lightbox .lightbox-caption { text-align: center; margin: .5rem 2rem .25rem; }
+.lightbox-close { position: absolute; top: .35rem; right: .55rem; border: 0; border-radius: 50%; background: #17365d; color: #fff; width: 2.25rem; height: 2.25rem; font-size: 1.6rem; line-height: 1; cursor: pointer; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; } }
+
+
+/* Part 3: accessible voice search control and live message counters. */
+.voice-search-button { margin-top: .5rem; cursor: pointer; }
+textarea[maxlength="350"] + small { display: block; margin-top: .35rem; }
+@media (max-width: 600px) { .voice-search-button { width: 100%; } }
+
+/* Make tutor portraits open as large, clear images on click. */
+.image-lightbox:has(img[src*="thandi-mokoena"], img[src*="sipho-dlamini"], img[src*="leanne-du-toit"], img[src*="naledi-phiri"]) img { max-width: 92vw; max-height: 86vh; }
+@media (max-width: 600px) { .image-lightbox { width: 96vw; padding: .5rem; } .image-lightbox img { max-width: 94vw; max-height: 82vh; } }
+
+/* Force the clicked tutor portrait to display large, not at its thumbnail size. */
+.image-lightbox {
+    box-sizing: border-box;
+    width: 96vw !important;
+    max-width: 96vw !important;
+    max-height: 96vh !important;
+    padding: 1.25rem;
+    overflow: auto;
+}
+.image-lightbox img {
+    display: block;
+    width: min(88vw, 1050px) !important;
+    max-width: 88vw !important;
+    height: auto !important;
+    max-height: 78vh !important;
+    object-fit: contain;
+    margin: 1.5rem auto .5rem;
+}
+@media (max-width: 600px) {
+    .image-lightbox { width: 98vw !important; max-width: 98vw !important; padding: .5rem; }
+    .image-lightbox img { width: 92vw !important; max-width: 92vw !important; max-height: 78vh !important; }
+}
+
+
+/* Daily date, midnight countdown and responsive learning-video section. */
+.daily-info-section { padding: 1.5rem 0; background: #edf4fb; }
+.daily-info-panel { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 1.5rem; padding: 1.5rem; border: 1px solid #d2e1f0; border-radius: 14px; background: #fff; box-shadow: 0 5px 18px rgb(23 54 93 / 8%); }
+.daily-info-panel h2 { margin-top: 0; color: #17365d; }
+.daily-date-label { margin: 0 0 .35rem; color: #40566f; font-weight: 700; }
+.daily-date { margin: 0; color: #17365d; font-size: clamp(1.1rem, 2.5vw, 1.5rem); font-weight: 700; }
+.countdown-block { padding-left: 1.5rem; border-left: 1px solid #d2e1f0; }
+.midnight-countdown { margin: 0; color: #1f6fb2; font-size: clamp(2rem, 5vw, 3rem); font-weight: 800; font-variant-numeric: tabular-nums; letter-spacing: .06em; }
+.countdown-caption { margin: .35rem 0 0; color: #40566f; font-size: .9rem; }
+.video-intro { max-width: 780px; margin: 0 auto 1.25rem; text-align: center; }
+.video-frame { position: relative; width: min(100%, 900px); margin: 0 auto; aspect-ratio: 16 / 9; overflow: hidden; border-radius: 12px; background: #0b1726; box-shadow: 0 8px 26px rgb(0 0 0 / 18%); }
+.video-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.video-fallback { margin-top: .75rem; text-align: center; }
+@media (max-width: 650px) { .daily-info-panel { grid-template-columns: 1fr; gap: 1rem; padding: 1.1rem; } .countdown-block { padding: 1rem 0 0; border-left: 0; border-top: 1px solid #d2e1f0; } }
+
+
+
+/* Responsive YouTube video player on the Home page. */
+.video-frame {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    aspect-ratio: 16 / 9;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 8px;
+    background: #000;
+}
+
+.video-frame iframe {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.video-intro,
+.video-fallback {
+    max-width: 800px;
+    margin: 15px auto;
+    text-align: center;
 }
