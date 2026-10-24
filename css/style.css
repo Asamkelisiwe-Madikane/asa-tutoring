@@ -669,31 +669,12 @@ textarea[maxlength="350"] + small { display: block; margin-top: .35rem; }
 @media (max-width: 650px) { .daily-info-panel { grid-template-columns: 1fr; gap: 1rem; padding: 1.1rem; } .countdown-block { padding: 1rem 0 0; border-left: 0; border-top: 1px solid #d2e1f0; } }
 
 
-
-/* Responsive YouTube video player on the Home page. */
-.video-frame {
-    position: relative;
-    width: 100%;
-    max-width: 800px;
-    aspect-ratio: 16 / 9;
-    margin: 20px auto;
-    overflow: hidden;
-    border-radius: 8px;
-    background: #000;
-}
-
-.video-frame iframe {
-    position: absolute;
-    inset: 0;
-    display: block;
-    width: 100%;
-    height: 100%;
-    border: 0;
-}
-
-.video-intro,
-.video-fallback {
-    max-width: 800px;
-    margin: 15px auto;
-    text-align: center;
-}
+/* Fast, clear YouTube preview: avoid loading the full player until the visitor presses Play. */
+.video-preview { background: #0b1726; }
+.video-play-button { position: absolute; inset: 0; display: flex; width: 100%; height: 100%; flex-direction: column; align-items: center; justify-content: center; gap: .75rem; padding: 0; border: 0; color: #fff; background: #0b1726; cursor: pointer; }
+.video-play-button img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .88; }
+.video-play-icon { position: relative; z-index: 1; display: grid; width: clamp(64px, 9vw, 88px); aspect-ratio: 1; place-items: center; padding-left: .35rem; border-radius: 50%; background: #d71920; color: white; font-size: clamp(1.7rem, 4vw, 2.5rem); box-shadow: 0 3px 16px rgb(0 0 0 / 30%); transition: transform .18s ease, background .18s ease; }
+.video-play-label { position: relative; z-index: 1; padding: .45rem .8rem; border-radius: 6px; background: rgb(0 0 0 / 75%); font-weight: 700; text-shadow: 0 1px 2px #000; }
+.video-play-button:hover .video-play-icon, .video-play-button:focus-visible .video-play-icon { transform: scale(1.08); background: #b51219; }
+.video-play-button:focus-visible { outline: 4px solid #fff; outline-offset: -7px; }
+.video-frame iframe { display: block; }
