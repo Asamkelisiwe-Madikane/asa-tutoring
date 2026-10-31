@@ -19,3 +19,8 @@ Additional requested features (24 October 2026):
 - Enquiry type dropdown includes enrolment, fees, timetable, online tutoring, subject support, learner progress, parent/guardian consultation and other.
 - Homepage includes a responsive YouTube mathematics lesson example. The video is third-party educational content and is clearly labelled as an example, not an actual recording of Asa's classes.
 - The homepage YouTube section uses a lightweight thumbnail and a clear Play button. The full embedded player loads only after a visitor clicks Play, helping the rest of the website load faster. A direct YouTube link remains available as a fallback.
+
+About page enhancements (31 October 2026):
+- Our Story now includes animated quick-fact counters and a three-step support path (js/site.js section 8). Numbers are in the HTML already, so they show without JavaScript; the animation is skipped for visitors who prefer reduced motion. The years figure is calculated from the 2022 founding year.
+- Mission, Vision and Values are shown as three icon cards; cards across the site lift on hover.
+- FAQ accordion upgraded (js/site.js section 9): searchable questions with a live result count, Expand all / Collapse all, animated open/close and a no-results message. The controls are hidden until JavaScript runs, so the plain accordion still works without it.
