@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://asamkelisiwe-madikane.github.io/asa-tutoring/sitemap.xml
