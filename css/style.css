@@ -609,9 +609,7 @@ button {
 .form-status.is-success { color: #14532d; background: #effaf2; border: 1px solid #48a868; }
 input[aria-invalid="true"], select[aria-invalid="true"], textarea[aria-invalid="true"] { border: 2px solid #b42318; outline-color: #b42318; }
 .faq-section { max-width: 100%; }
-.faq-item { margin: .75rem 0; padding: 1rem 1.1rem; border: 1px solid #d4dfeb; border-radius: 8px; background: #fff; }
-.faq-item summary { cursor: pointer; font-weight: 700; color: #17365d; }
-.faq-item p { margin-bottom: 0; padding-top: .65rem; }
+/* The FAQ accordion design is in the "ABOUT PAGE: FAQ ACCORDION" section at the end of this file. */
 .image-lightbox { width: min(96vw, 1400px); max-width: 96vw; max-height: 96vh; padding: 1rem; border: 0; border-radius: 10px; background: #fff; box-shadow: 0 12px 45px #0008; overflow: auto; }
 .image-lightbox::backdrop { background: rgb(8 20 35 / 82%); }
 .image-lightbox img { display: block; max-width: 92vw; max-height: 86vh; width: auto; height: auto; margin: 1.5rem auto .5rem; object-fit: contain; }
@@ -678,3 +676,534 @@ textarea[maxlength="350"] + small { display: block; margin-top: .35rem; }
 .video-play-button:hover .video-play-icon, .video-play-button:focus-visible .video-play-icon { transform: scale(1.08); background: #b51219; }
 .video-play-button:focus-visible { outline: 4px solid #fff; outline-offset: -7px; }
 .video-frame iframe { display: block; }
+
+
+/* ==========================================================
+   ABOUT PAGE: MISSION / VISION / VALUES CARDS
+   Three icon cards in a row. The card under the pointer lifts
+   up and gets a deeper shadow (the hover effect).
+   ========================================================== */
+.mvv-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.75rem;
+    align-items: stretch;
+}
+
+.mvv-card {
+    background: #ffffff;
+    border: 1px solid #dbe6f1;
+    border-radius: 1rem;
+    padding: 1.75rem 1.75rem 2rem;
+    box-shadow: 0 4px 14px rgba(18, 63, 109, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Round pale-blue badge that holds each card's icon. */
+.mvv-icon {
+    display: grid;
+    place-items: center;
+    width: 3rem;
+    height: 3rem;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+    background: #e8f2fb;
+    color: #1f6fb2;
+}
+
+.mvv-card h2 {
+    margin: 0 0 0.75rem;
+    color: #17365d;
+    font-size: clamp(1.7rem, 2.6vw, 2.25rem);
+    line-height: 1.15;
+}
+
+.mvv-card p {
+    margin: 0;
+    color: #5b6b7d;
+    line-height: 1.7;
+}
+
+/* The lift: move the card up 6px and deepen the shadow.
+   Keyboard focus inside a card gets the same treatment. */
+.mvv-card:hover,
+.mvv-card:focus-within {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 38px rgba(18, 63, 109, 0.18);
+}
+
+/* Small caps label and centred heading used above the detailed values. */
+.eyebrow {
+    margin: 0 0 0.35rem;
+    text-align: center;
+    color: #1f6fb2;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.section-heading-center {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+/* Stack the three cards on tablets and phones. */
+@media (max-width: 850px) {
+    .mvv-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Touch screens have no hover, so skip the lift there. */
+@media (hover: none) {
+    .mvv-card:hover {
+        transform: none;
+        box-shadow: 0 4px 14px rgba(18, 63, 109, 0.08);
+    }
+}
+
+/* Respect visitors who ask for less motion. */
+@media (prefers-reduced-motion: reduce) {
+    .mvv-card,
+    .mvv-card:hover,
+    .mvv-card:focus-within {
+        transition: none;
+        transform: none;
+    }
+}
+
+
+/* ==========================================================
+   CARD HOVER LIFT (Home "Why Choose", About values, Services, Tutors)
+   Same effect as the Mission / Vision / Values cards: the card
+   under the pointer rises 6px and its shadow deepens.
+   ========================================================== */
+.card,
+.tutor-card {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover,
+.card:focus-within,
+.tutor-card:hover,
+.tutor-card:focus-within {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 38px rgba(18, 63, 109, 0.18);
+}
+
+/* Touch screens have no hover, so skip the lift there. */
+@media (hover: none) {
+    .card:hover,
+    .tutor-card:hover {
+        transform: none;
+        box-shadow: 0 4px 12px rgba(18, 63, 109, 0.08);
+    }
+}
+
+/* Respect visitors who ask for less motion. */
+@media (prefers-reduced-motion: reduce) {
+    .card,
+    .card:hover,
+    .card:focus-within,
+    .tutor-card,
+    .tutor-card:hover,
+    .tutor-card:focus-within {
+        transition: none;
+        transform: none;
+    }
+}
+
+
+/* ==========================================================
+   ABOUT PAGE: "OUR STORY" QUICK FACTS AND SUPPORT STEPS
+   Counting numbers and a three-step path under the story card.
+   ========================================================== */
+.story-stats {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.story-stat {
+    padding: 1.25rem 1rem;
+    text-align: center;
+    background: linear-gradient(160deg, #1f6fb2 0%, #123f6d 100%);
+    border-radius: 0.8rem;
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(18, 63, 109, 0.18);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.story-stat:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 38px rgba(18, 63, 109, 0.28);
+}
+
+.story-stat-number {
+    display: block;
+    font-size: clamp(2.2rem, 4vw, 3rem);
+    font-weight: 800;
+    line-height: 1.1;
+    /* Equal-width digits stop the number from jiggling while it counts. */
+    font-variant-numeric: tabular-nums;
+}
+
+.story-stat-label {
+    display: block;
+    margin-top: 0.35rem;
+    font-size: 0.95rem;
+    line-height: 1.35;
+    color: #dcecfa;
+}
+
+.story-steps-heading {
+    margin: 2rem 0 1rem;
+    color: #123f6d;
+}
+
+.story-steps {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.25rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.story-step {
+    position: relative;
+    padding: 1.25rem;
+    background: #ffffff;
+    border: 1px solid #cfe3f2;
+    border-radius: 0.8rem;
+    box-shadow: 0 4px 12px rgba(18, 63, 109, 0.08);
+}
+
+/* A small arrow joins each step to the next one on wide screens. */
+.story-step:not(:last-child)::after {
+    content: "\2192";
+    position: absolute;
+    top: 1.6rem;
+    right: -1.1rem;
+    z-index: 1;
+    color: #1f6fb2;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.story-step-badge {
+    display: grid;
+    place-items: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    margin-bottom: 0.6rem;
+    border-radius: 50%;
+    background: #e8f2fb;
+    color: #1f6fb2;
+    font-weight: 800;
+}
+
+.story-step h4 {
+    margin: 0 0 0.4rem;
+    color: #17365d;
+    font-size: 1.1rem;
+}
+
+.story-step p {
+    margin: 0;
+}
+
+/* Scroll reveal: only hidden when JavaScript is running, so the content
+   is never lost for visitors without it. site.js adds .is-visible. */
+.js .story-stat,
+.js .story-step {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 0.6s ease, transform 0.6s ease, box-shadow 0.25s ease;
+}
+
+.js .story-stat.is-visible,
+.js .story-step.is-visible {
+    opacity: 1;
+    transform: none;
+}
+
+/* Once the reveal has finished, site.js adds .is-settled so the hover lift is quick again. */
+.js .story-stat.is-settled {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.js .story-stat.is-visible:hover {
+    transform: translateY(-6px);
+}
+
+@media (max-width: 950px) {
+    .story-stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 700px) {
+    .story-steps {
+        grid-template-columns: 1fr;
+    }
+
+    /* The arrow points down instead of right once the steps stack. */
+    .story-step:not(:last-child)::after {
+        content: "\2193";
+        top: auto;
+        right: auto;
+        bottom: -1.25rem;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 420px) {
+    .story-stats {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Touch screens have no hover; reduced-motion visitors see everything at once. */
+@media (hover: none) {
+    .story-stat:hover,
+    .js .story-stat.is-visible:hover {
+        transform: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .js .story-stat,
+    .js .story-step {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    .story-stat:hover,
+    .js .story-stat.is-visible:hover {
+        transform: none;
+    }
+}
+
+
+/* ==========================================================
+   ABOUT PAGE: FAQ ACCORDION
+   Cards with a rotating chevron, a highlighted open state,
+   a search box and expand / collapse all buttons.
+   ========================================================== */
+.faq-intro {
+    margin-top: 0;
+}
+
+/* Search box and buttons sit on one row on wide screens. */
+.faq-tools {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 0.5rem 1.5rem;
+    margin-bottom: 0.25rem;
+}
+
+/* The hidden attribute must win over the flex layout above. */
+.faq-tools[hidden],
+.faq-empty[hidden],
+.faq-item[hidden] {
+    display: none;
+}
+
+.faq-search {
+    flex: 1 1 18rem;
+    max-width: 32rem;
+    margin-bottom: 0;
+}
+
+.faq-search small {
+    display: block;
+    margin-top: 0.35rem;
+}
+
+.faq-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.faq-actions .button {
+    margin: 0;
+}
+
+/* A disabled button means there is nothing for it to do right now. */
+.faq-toggle-all:disabled {
+    background: #9ebbd1;
+    cursor: not-allowed;
+}
+
+.faq-toggle-all:disabled:hover {
+    background: #9ebbd1;
+    outline: none;
+}
+
+.faq-status {
+    min-height: 1.5rem;
+    margin: 0.5rem 0 0;
+    color: #40566f;
+    font-size: 0.95rem;
+}
+
+.faq-item {
+    margin: 0.75rem 0;
+    background: #ffffff;
+    border: 1px solid #cfe3f2;
+    border-radius: 0.8rem;
+    box-shadow: 0 4px 12px rgba(18, 63, 109, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+}
+
+/* The whole question row is the clickable area. */
+.faq-item summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.1rem 1.25rem;
+    border-radius: 0.8rem;
+    color: #17365d;
+    font-weight: 700;
+    cursor: pointer;
+    list-style: none;
+}
+
+/* Hide the browser's default triangle in every browser. */
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+/* Round chevron badge on the right. The arrow is drawn as an inline SVG. */
+.faq-item summary::after {
+    content: "";
+    flex: 0 0 2rem;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: #e8f2fb;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231f6fb2' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 1.2rem;
+    transition: transform 0.3s ease, background-color 0.25s ease;
+}
+
+.faq-item summary:focus-visible {
+    outline: 3px solid #1f6fb2;
+    outline-offset: -3px;
+}
+
+/* Open state: blue accent bar, light tint and a flipped chevron. */
+.faq-item[open] {
+    background: #f5faff;
+    box-shadow: inset 4px 0 0 #1f6fb2, 0 4px 12px rgba(18, 63, 109, 0.08);
+}
+
+.faq-item[open] summary::after {
+    transform: rotate(180deg);
+    background-color: #cfe5f7;
+}
+
+/* Same hover lift as the other cards on the site. */
+.faq-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 38px rgba(18, 63, 109, 0.18);
+}
+
+.faq-item[open]:hover {
+    box-shadow: inset 4px 0 0 #1f6fb2, 0 18px 38px rgba(18, 63, 109, 0.18);
+}
+
+/* The answer text fades in as the item opens. */
+.faq-item > p {
+    margin: 0;
+    padding: 0 1.25rem 1.25rem;
+}
+
+.faq-item[open] > p {
+    animation: faq-answer-in 0.35s ease;
+}
+
+@keyframes faq-answer-in {
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.faq-empty {
+    margin: 1rem 0 0;
+    padding: 1rem 1.25rem;
+    background: #eef8ff;
+    border-left: 4px solid #2f8bd3;
+    border-radius: 0.4rem;
+}
+
+@media (max-width: 600px) {
+    .faq-search {
+        flex-basis: 100%;
+        max-width: none;
+    }
+
+    .faq-actions {
+        width: 100%;
+    }
+
+    .faq-actions .button {
+        flex: 1 1 0;
+        text-align: center;
+    }
+
+    .faq-item summary {
+        padding: 1rem;
+    }
+
+    .faq-item > p {
+        padding: 0 1rem 1rem;
+    }
+}
+
+/* Touch screens have no hover, so skip the lift there. */
+@media (hover: none) {
+    .faq-item:hover {
+        transform: none;
+        box-shadow: 0 4px 12px rgba(18, 63, 109, 0.08);
+    }
+
+    .faq-item[open]:hover {
+        box-shadow: inset 4px 0 0 #1f6fb2, 0 4px 12px rgba(18, 63, 109, 0.08);
+    }
+}
+
+/* Respect visitors who ask for less motion. */
+@media (prefers-reduced-motion: reduce) {
+    .faq-item,
+    .faq-item:hover,
+    .faq-item summary::after {
+        transition: none;
+        transform: none;
+    }
+
+    .faq-item[open] > p {
+        animation: none;
+    }
+}
+
+
