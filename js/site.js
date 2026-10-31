@@ -1,4 +1,3 @@
-
 /*
  * Asa's Future Tutoring Centre
  * Part 3: Client-side form validation, service search, voice search,
@@ -184,7 +183,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-
     // =========================================================
     // 2. LIVE MESSAGE COUNTS AND WORD LIMIT
     // =========================================================
@@ -233,7 +231,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     );
 
-
     // =========================================================
     // 3. SERVICE SEARCH
     // =========================================================
@@ -276,7 +273,6 @@ document.addEventListener('DOMContentLoaded', () => {
         // Display the initial results.
         filterServices();
     }
-
 
     // =========================================================
     // 4. OPTIONAL VOICE SEARCH
@@ -364,7 +360,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-
     // =========================================================
     // 5. RESPONSIVE, CLICK-TO-PLAY YOUTUBE VIDEO
     // =========================================================
@@ -425,7 +420,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         }, { once: true });
     });
-
 
     // =========================================================
     // 6. SOUTH AFRICAN DATE AND MIDNIGHT COUNTDOWN
@@ -505,7 +499,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         window.setInterval(updateDailyInfo, 1000);
     }
-
 
     // =========================================================
     // 7. ACCESSIBLE IMAGE LIGHTBOX
@@ -606,6 +599,291 @@ document.addEventListener('DOMContentLoaded', () => {
                 closeLightbox();
             }
         });
+    }
+
+    // =========================================================
+    // 8. ABOUT PAGE: COUNTING NUMBERS AND SCROLL REVEAL
+    // =========================================================
+
+    const statNumbers = [
+        ...document.querySelectorAll('.story-stat-number')
+    ];
+
+    const revealItems = [
+        ...document.querySelectorAll('.story-stat, .story-step')
+    ];
+
+    if (statNumbers.length || revealItems.length) {
+
+        // Visitors who ask their device for less motion see the final numbers straight away.
+        const reduceMotion = window.matchMedia(
+            '(prefers-reduced-motion: reduce)'
+        ).matches;
+
+        // Work out each target number. "Years supporting learners" is calculated
+        // from the founding year so it stays correct as time passes.
+        statNumbers.forEach((element) => {
+            const sinceYear = Number(element.dataset.sinceYear);
+
+            if (sinceYear) {
+                element.dataset.countTo = Math.max(
+                    new Date().getFullYear() - sinceYear,
+                    0
+                );
+            }
+
+            element.textContent = element.dataset.countTo;
+        });
+
+        // Count a number up from 0 to its target over about 1.4 seconds.
+        const countUp = (element) => {
+            const target = Number(element.dataset.countTo);
+            const duration = 1400;
+            const start = performance.now();
+
+            const step = (now) => {
+                const progress = Math.min((now - start) / duration, 1);
+
+                // Ease-out: fast at the start and gentle at the end.
+                const eased = 1 - Math.pow(1 - progress, 3);
+
+                element.textContent = Math.round(target * eased);
+
+                if (progress < 1) {
+                    window.requestAnimationFrame(step);
+                }
+            };
+
+            window.requestAnimationFrame(step);
+        };
+
+        // Older browsers without IntersectionObserver keep the plain, visible content.
+        if (reduceMotion || !('IntersectionObserver' in window)) {
+            revealItems.forEach((item) => item.classList.add('is-visible'));
+        }
+        else {
+            // This class lets the CSS hide items ONLY when JavaScript is able to reveal them.
+            document.documentElement.classList.add('js');
+
+            // Items appear one after another instead of all at once.
+            revealItems.forEach((item, index) => {
+                item.style.transitionDelay = `${(index % 4) * 120}ms`;
+            });
+
+            statNumbers.forEach((element) => {
+                element.textContent = '0';
+            });
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (!entry.isIntersecting) {
+                        return;
+                    }
+
+                    const item = entry.target;
+
+                    item.classList.add('is-visible');
+
+                    // After the reveal ends, remove the stagger delay so hover feels instant.
+                    window.setTimeout(() => {
+                        item.style.transitionDelay = '';
+                        item.classList.add('is-settled');
+                    }, 1500);
+
+                    const number = item.querySelector('.story-stat-number');
+
+                    if (number) {
+                        countUp(number);
+                    }
+
+                    // Each item only needs to animate once.
+                    observer.unobserve(item);
+                });
+            }, { threshold: 0.35 });
+
+            revealItems.forEach((item) => observer.observe(item));
+        }
+    }
+
+    // =========================================================
+    // 9. ABOUT PAGE: FAQ SEARCH, EXPAND ALL AND SMOOTH ACCORDION
+    // =========================================================
+
+    const faqItems = [
+        ...document.querySelectorAll('.faq-item')
+    ];
+
+    if (faqItems.length) {
+        const faqTools = document.querySelector('.faq-tools');
+        const faqSearch = document.querySelector('#faq-search');
+        const faqStatus = document.querySelector('#faq-status');
+        const faqEmpty = document.querySelector('#faq-empty');
+        const expandAll = document.querySelector('#faq-expand-all');
+        const collapseAll = document.querySelector('#faq-collapse-all');
+
+        const faqReduceMotion = window.matchMedia(
+            '(prefers-reduced-motion: reduce)'
+        ).matches;
+
+        // Reveal the search and buttons now that JavaScript is running.
+        if (faqTools) {
+            faqTools.hidden = false;
+        }
+
+        // ---------------------------------------------------------
+        // Smooth open and close. The browser normally jumps open
+        // instantly, so the height is animated from the old size to the new one.
+        // ---------------------------------------------------------
+        const animateFaq = (details, willOpen) => {
+            // Without animation support, or if motion is reduced, just toggle.
+            if (faqReduceMotion || typeof details.animate !== 'function') {
+                details.open = willOpen;
+                return;
+            }
+
+            // Stop any animation that is still running on this item.
+            if (details.faqAnimation) {
+                details.faqAnimation.cancel();
+            }
+
+            const startHeight = details.offsetHeight;
+
+            // Measure the final height by switching to the end state for a moment.
+            details.open = willOpen;
+            const endHeight = details.offsetHeight;
+
+            // When closing, stay open until the animation finishes.
+            if (!willOpen) {
+                details.open = true;
+                details.dataset.closing = 'true';
+            }
+
+            details.style.overflow = 'hidden';
+
+            const animation = details.animate(
+                { height: [`${startHeight}px`, `${endHeight}px`] },
+                { duration: 300, easing: 'ease' }
+            );
+
+            details.faqAnimation = animation;
+
+            const cleanUp = () => {
+                details.faqAnimation = null;
+                details.style.overflow = '';
+                delete details.dataset.closing;
+            };
+
+            animation.onfinish = () => {
+                details.open = willOpen;
+                cleanUp();
+            };
+
+            // A cancelled animation means the item was clicked again mid-way.
+            animation.oncancel = cleanUp;
+        };
+
+        faqItems.forEach((details) => {
+            const summary = details.querySelector('summary');
+
+            if (!summary) {
+                return;
+            }
+
+            // Take over the click so the change can be animated.
+            // Enter and Space on the keyboard also trigger this click.
+            summary.addEventListener('click', (event) => {
+                event.preventDefault();
+
+                const willOpen =
+                    details.dataset.closing === 'true'
+                        ? true
+                        : !details.open;
+
+                animateFaq(details, willOpen);
+            });
+
+            // Keep the Expand all / Collapse all buttons up to date.
+            details.addEventListener('toggle', () => updateFaqButtons());
+        });
+
+        // ---------------------------------------------------------
+        // Expand all and Collapse all
+        // ---------------------------------------------------------
+        const visibleFaqs = () =>
+            faqItems.filter((item) => !item.hidden);
+
+        function updateFaqButtons() {
+            if (!expandAll || !collapseAll) {
+                return;
+            }
+
+            const visible = visibleFaqs();
+
+            expandAll.disabled =
+                !visible.length || visible.every((item) => item.open);
+
+            collapseAll.disabled =
+                !visible.some((item) => item.open);
+        }
+
+        if (expandAll) {
+            expandAll.addEventListener('click', () => {
+                visibleFaqs().forEach((item) => {
+                    item.open = true;
+                });
+                updateFaqButtons();
+            });
+        }
+
+        if (collapseAll) {
+            collapseAll.addEventListener('click', () => {
+                visibleFaqs().forEach((item) => {
+                    item.open = false;
+                });
+                updateFaqButtons();
+            });
+        }
+
+        // ---------------------------------------------------------
+        // Search the questions and answers
+        // ---------------------------------------------------------
+        const filterFaqs = () => {
+            const term = faqSearch
+                ? faqSearch.value.trim().toLocaleLowerCase()
+                : '';
+
+            let shown = 0;
+
+            faqItems.forEach((item) => {
+                const matches = item.textContent
+                    .toLocaleLowerCase()
+                    .includes(term);
+
+                item.hidden = !matches;
+
+                if (matches) {
+                    shown++;
+                }
+            });
+
+            if (faqStatus) {
+                faqStatus.textContent =
+                    `${shown} of ${faqItems.length} question${faqItems.length === 1 ? '' : 's'} shown.`;
+            }
+
+            if (faqEmpty) {
+                faqEmpty.hidden = shown !== 0;
+            }
+
+            updateFaqButtons();
+        };
+
+        if (faqSearch) {
+            faqSearch.addEventListener('input', filterFaqs);
+        }
+
+        // Display the initial state.
+        filterFaqs();
     }
 
 });
